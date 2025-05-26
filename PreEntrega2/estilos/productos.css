@@ -1,0 +1,128 @@
+/* seccion de productos */
+/* cards de productos */
+.section-productos,
+.section-categorias{
+    text-align: center;
+}
+
+.categorias-card{
+    background-color: #1e1e1e;
+    padding: 16px;
+    border-radius: 8px;
+    text-align: center;
+    width: 140px;
+}
+
+.categorias-card img{
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.categorias-card span{
+    display: block;
+    font-weight: 600;
+}
+
+.productos-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 20px;        
+}
+.producto-card,
+.lanzamientos-card,
+.oferta-card
+.resenas-card{
+    width: 23%;
+    min-width: 250px;
+    margin: 15px    0;
+    padding: 10px   12px;
+    background-color: #1e1e1e;
+    border-radius: 20px;
+    border: 1px solid   #9775fa;
+    cursor: pointer;
+    text-align: center;
+    overflow: hidden;
+}
+
+.producto-card img,
+.lanzamientos-card img,
+.oferta-card img{
+    width: 100%;
+    border-radius: 20px;
+}
+
+.producto-descripcion span,
+.lanzamientos-card h3,
+.oferta-card h3{
+    display: block;
+    font-weight: 600;
+    margin: 12px 0;
+    font-size: 16px;
+    color: #e0e0e0;
+}
+
+.autor{
+    font-style: italic;
+    color: #b0b0b0;
+    margin-bottom: 20px;
+}
+
+.precio{
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #8a8282;
+}
+
+.idioma,
+.resenas{
+    font-size: 14px;
+    color: #8a8282;
+    margin-bottom: 20px;
+}
+
+.resenas-card{
+    
+    background-color: #1e1e1e;
+    padding: 24px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0   2px 8px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+}
+
+.resenas-card img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.resenas-card h4{
+    margin-bottom: 20px;
+}
+
+.calificacion{
+    color: #9775fa;
+    margin-bottom: 20px;
+}
+
+.resenas-texto{
+    font-size: 14px;
+    color: #e0e0e0;
+}
+
+.carrito{
+    background-color: #9775fa;
+    color: white;
+    border: none;
+    padding: 8px    15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s    ease;
+}
+
+.carrito:hover{
+    background-color: #7d5de7;
+}

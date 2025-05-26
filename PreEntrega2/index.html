@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap">
+    <!-- estilos por modulos -->
+         <link rel="stylesheet" href="estilos/styles.css">
+    <link rel="stylesheet" href="estilos/componentes.css">
+        <link rel="stylesheet" href="estilos/layout.css">
+    <link rel="stylesheet" href="estilos/hero.css">
+    <link rel="stylesheet" href="estilos/header.css">
+    <link rel="stylesheet" href="estilos/productos.css">
+    <link rel="stylesheet" href="estilos/footer.css">
+    <!-- responsive -->
+    <link rel="stylesheet" href="estilos/responsive.css">
+    
+    <title> Libroptopus </title>
+    
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo-link">
+            <!-- cabecera con logo y menu de navegacion -->
+            <img src="img/Logo.jpg" alt="Logo Libroptopus" width="80px" height="80px">
+            <span class="logo-texto">Libroptopus</span>
+        </a>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#categorias">Categorías</a></li>
+                <li><a href="#catalogo">Catálogo</a></li>
+                <li><a href="#novedades">Novedades</a></li>
+                <li><a href="#ofertas">Ofertas</a></li>
+                <li><a href="#resenas">Reseñas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li>
+                    <a href="cart.html">
+                        <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- banner principal -->
+        <section class="hero-banner" id="inicio">
+            <div class="hero-content">
+                <h3>Descubre mundos entre páginas</h3>
+                <p>Tu librería online con miles de títulos a un click de distancia</p>
+                <button class="btn" onclick="location.href='#catalogo'">Ver catálogo</button>
+            </div>
+        </section>
+
+        <!-- seccion de categorias -->
+        <section class="section-categorias" id="categorias">
+            <h2 class="section-title">Explora por Categorías</h2>
+            <div class="separador"></div>
+            <div class="categorias-container">
+
+                <div class="categorias-card" aria-label="Ficción">
+                    <img src="" alt="Ficción">
+                    <span>Ficción</span>                   
+                </div>
+
+                <div class="categorias-card" aria-label="No ficción">
+                    <img src="" alt="No ficción">
+                    <span>No Ficción</span>
+                </div>
+
+                <div class="categorias-card" aria-label="Infantil">
+                    <img src="" alt="Infantil">
+                    <span>Infantil</span>
+                </div>
+
+                <div class="categorias-card" aria-label="Académico">
+                    <img src="" alt="Académico">
+                    <span>Académico</span>
+                </div>
+
+                <div class="categorias-card" aria-label="Poesia">
+                    <img src="" alt="Poesia">
+                    <span>Poesia</span>
+                </div>
+            </div>    
+        </section>
+
+        <!-- catalogo de libros flexbox -->
+        <section class="section-productos" id="catalogo">
+            <h2 class="section-title">Nuestro catálogo</h2>
+            <div class="separador"></div>
+            <div class="productos-container">
+                <!-- productos flexbox -->
+                
+                <div class="producto-card">
+                    <img src="img/Brazales de duelo.jpg" alt="Brazales de duelo">
+                    <div class="producto-descripcion">
+                        <span>El Pozo de la Ascensión: Nacidos de la bruma 2 (Versión Ilustrada)</span>
+                        <p class="autor">Autor: Brandon Sanderson</p>
+                        <p class="precio">$59.999,00</p>
+                        <p class="idioma">Idioma: Español</p>
+                        <p class="resena">Durante mil años nada ha cambiado: han caído las cenizas, los skaa han sido esclavizados y el Lord Legislador ha dominado el mundo. Pero lo imposible ha sucedido. El Lord Legislador ha muerto. Sin embargo, vencer y matarlo fue la parte sencilla. El verdadero desafío será sobrevivir a las consecuencias de su caída.
+                            Tomar el poder tal vez resultó fácil, pero ¿qué ocurre después?, ¿cómo se utiliza? La tarea de reconstruir el mundo, ahora que Kelsier no está, ha quedado en manos de Vin. Y las brumas, desde que el Lord Legislador cayó, se han vuelto cada vez más impredecibles...
+                            A medida que el asedio se intensifica, la antigua leyenda del Pozo de la Ascensión ofrece un único rayo de esperanza.
+                            En ese mundo de aventura épica, la estrategia política y religiosa debe lidiar con los siempre misteriosos poderes de la alomancia...
+                        </p>
+                        <!-- <button class="carrito">Agregar al carrito</button> -->
+                    </div>
+                    <a href="#" class="carrito">
+                        <i class="fal fa-shopping-cart"></i>
+                    </a>
+                </div>
+
+                <div class="producto-card">
+                    <img src="img/Canciones de un soñador muerto.jpg" alt="Canciones de un soñador muerto">
+                    <div class="producto-descripcion">
+                        <span>Canciones de un Soñador Muerto: La Agónica Resurrección de Victor Frankenstein y Otros Relatos Góticos: 118 (Gótica)</span>
+                        <p class="autor">Autor: Thomas Ligotti</p>
+                        <p class="precio">$42.080,00</p>
+                        <p class="idioma">Idioma: Español</p>
+                        <p class="resena">El presente volumen reúne dos colecciones: Canciones de un soñador muerto (1985, rev. 1989), su primera obra, y La agónica resurrección de Victor Frankenstein, y otros relatos góticos (1994), una suerte de breve revisión y recreación de los mitos universales de la literatura gótica.
+                            «La emoción más intensa que jamás he sentido es el miedo», revelaba Ligotti en una entrevista reciente, «pero su causa es un misterio, es como una experiencia espiritual, y el mejor modo de explicar este misterio tan terrible es escribir historias que provoquen esta experiencia en el lector». Al final, «todos estamos condenados a inventar nuestros propios infiernos».
+                        </p>
+                    </div>
+                    <a href="#" class="carrito">
+                        <i class="fal fa-shopping-cart"></i>
+                    </a>
+                </div>
+
+                <div class="producto-card">
+                    <img src="img/El resurreccionista.jpg" alt="El resurreccionista">
+                    <div class="producto-descripcion">
+                        <span>EL RESURRECCIONISTA- la obra perdida del doctor Spencer Black</span>
+                        <p class="autor">Autor: E. B. Hudspeth</p>
+                        <p class="precio">$43.000,00</p>
+                        <p class="idioma">Idioma: Español</p>
+                        <p class="resena">Un libro ilustrado mortal.Filadelfia, finales de la decada de 1870. Una ciudad de farolas de gas, calles adoquinadas y carruajes tirados por caballos, y hogar del controvertido cirujano Dr. Spencer Black. Hijo de un ladron de tumbas, el joven Dr. Black estudia en la prestigiosa Academia de Medicina de Filadelfia, donde desarrolla una hipotesis poco convencional: que 
+                            las bestias mitologicas de leyendas y folclore, como sirenas, minotauros o satiros eran, de hecho, los ancestros evolutivos de la humanidad. Y, mas alla de eso, se pregunta: ¿y si hubiera una manera de que la humanidad alcanzara el potencial completo que estos ancestros implicaban?
+                        </p>
+                    </div>
+                    <a href="#" class="carrito">
+                        <i class="fal fa-shopping-cart"></i>
+                    </a>
+                </div>
+
+                <div class="producto-card">
+                    <img src="img/La caida de la casa usher.jpg" alt="La caida de la casa usher">
+                    <div class="producto-descripcion">
+                        <span>La Caída de la Casa Usher: La Verdad Sobre el Caso del Señor Valdemar</span>
+                        <p class="autor">Autor: Edgar Allan Poe; Ismael Pinteño Visuara</p>
+                        <p class="precio">$56.434,00</p>
+                        <p class="idioma">Idioma: Español</p>
+                        <p class="resena">«La caída de la Casa Usher» (1839) es uno de los relatos más reconocidos de Edgar Allan Poe, un clásico del género gótico que ha inspirado a autores como Shirley Jackson y Stephen King. La historia sigue al narrador mientras visita la mansión de su amigo Roderick Usher, un lugar deteriorado que refleja la ruina emocional y física de sus habitantes. 
+                            La decadencia de la casa marcará también un final de pesadilla para el linaje de los dos hermanos.
+                            En «La verdad sobre el caso del señor Valdemar» (1845), Poe aborda los límites entre la vida y la muerte a través de un experimento de hipnosis. Este relato combina elementos de pseudociencia y horror, explorando preguntas éticas y científicas sobre lo desconocido. La atmósfera inquietante y el enfoque en el mesmerismo lo convierten en una de las obras más intrigantes del autor.
+                        </p>
+                    </div>
+                    <a href="#" class="carrito">
+                        <i class="fal fa-shopping-cart"></i>
+                    </a>
+                </div>
+
+                <div class="producto-card">
+                    <img src="img/El aliento de los dioses-diagonal.jpg" alt="El aliento de los dioses">
+                    <div class="producto-descripcion">
+                        <span>El Aliento de los Dioses (Edición Limitada)</span>
+                        <p class="autor">Autor: Brandon Sanderson</p>
+                        <p class="precio">$46.000,00</p>
+                        <p class="idioma">Idioma: Español</p>
+                        <p class="resena">Hace años, el monarca de Idris firmó un tratado con el reino de Hallandren según el cual el rey Dedelin enviaría a su hija mayor, Vivenna, para casarse con Susebron, el rey-dios de Hallabdren. Vivenna ha sido adiestrada durante toda su vida para ser una novia adecuada para Susebron y así cumplir con su deber y ayudar a forjar una paz estable entre los dos reinos. 
+                            Ese era el plan, pero el monarca de Idris envía a su hija Siri, desobediente e independiente, en lugar de Vivenna.
+                            Mientras intenta encontrar su lugar en la corte de Susebron, Siri descubre la verdad oculta sobre el rey-dios. En Idris, Vivenna se siente intranquila y teme que su hermana no esté preparada para esa nueva vida, por lo que decide viajar a Hallandren. Allí se reúne con la gente de Idris que trabaja en la capital, Telir, y comienza una nueva vida de espionaje y sabotaje. 
+                            El plan de Vivenna es rescatar a Siri, aunque tal vez esta ni necesite ni desee ser salvada.
+                        </p>
+                    </div>
+                    <a href="#" class="carrito">
+                        <i class="fal fa-shopping-cart"></i>
+                    </a>
+                </div>
+
+                <div class="producto-card">
+                    <img src="img/El barco de teseo-diagonal.jpg" alt="El barco de teseo">
+                    <div class="producto-descripcion">
+                        <span>S. El Barco de Teseo</span>
+                        <p class="autor">Autor: J. J. Abrams </p>
+                        <p class="precio">$63,938,00</p>
+                        <p class="idioma">Idioma: Español</p>
+                        <p class="resena">Un libro, dos lectores, un mundo de misterio, amenazas y deseo…
+                            Una joven encuentra accidentalmente un libro dejado fuera de lugar por un extraño: un lector intrigado, embelesado por la historia y su misterioso autor, como lo revelan las notas escritas al margen. Ella responde escribiendo más notas y vuelve a dejar el libro para que lo coja el chico. Así comienza un intercambio en el que los dos se adentrarán en lo desconocido. 
+                        </p>
+                    </div>
+                    <a href="#" class="carrito">
+                        <i class="fal fa-shopping-cart"></i>
+                    </a>
+                </div>
+
+                <div class="producto-card">
+                    <img src="img/HP y el caliz de fuego-diagonal.jpg" alt="HP y el caliz de fuego">
+                    <div class="producto-descripcion">
+                        <span>Harry Potter y el Cáliz de Fuego (Edición Minalima)</span>
+                        <p class="autor">Autor: J.K Rowling</p>
+                        <p class="precio">$87.999,00</p>
+                        <p class="idioma">Idioma: Español</p>
+                        <p class="resena">Sumérgete en esta magnífica edición especial de Harry Potter y el cáliz de fuego, con acabados de lujo y sorpresas interactivas.
+                            En esta edición especial de Harry Potter y el cáliz de fuego, el texto completo e íntegro de la obra original de J.K. Rowling va acompañado de preciosas ilustraciones a todo color en casi todas las páginas, un diseño increíble y varias sorpresas interactivas de ingeniería en papel.
+                        </p>
+                    </div>
+                    <a href="#" class="carrito">
+                        <i class="fal fa-shopping-cart"></i>
+                    </a>
+                </div>
+
+                <div class="producto-card">
+                    <img src="img/Nacidos de la bruma-diagonal.jpg" alt="Nacidos de la bruma">
+                    <div class="producto-descripcion">
+                        <span>Nacidos de la Bruma (Edición Limitada)</span>
+                        <p class="autor">Autor: Brandon Sanderson</p>
+                        <p class="precio">$47.000,00</p>
+                        <p class="idioma">Idioma: Español</p>
+                        <p class="resena">Durante mil años, han caído las cenizas y nada florece. Durante mil años, los Skaa han sido esclavizados y viven sumidos en un miedo inevitable. Durante mil años, el Lord Legislador reina con un poder absoluto gracias al terror, a sus poderes y a su inmortalidad. 
+                            Le ayudan «obligadores» e «inquisidores», junto a la poderosa magia de la alomancia. Pero los nobles a menudo han tenido trato sexual con jóvenes skaa y, aunque la ley lo prohíbe, algunos de sus bastardos han sobrevivido y heredado los poderes alománticos: son los «nacidos de la bruma» (mistborns). 
+                            Ahora, Kelsier, el «superviviente», el único que ha logrado huir de los Pozos de Hathsin, ha encontrado a Vin, una pobre chica skaa con mucha suerte… Tal vez los dos, unidos a la rebelión que los skaa intentan desde hace mil años, logren cambiar el mundo y la atroz dominación del Lord Legislador.
+                        </hp>
+                    </div>
+                    <a href="#" class="carrito">
+                        <i class="fal fa-shopping-cart"></i>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- seccion novedades -->
+        <section id="novedades" class="nuevos-lanzamientos">
+            <h2 class="section-title">Novedades</h2>
+            <div class="separador"></div>
+            <div class="nuevos-lanzamientos-container">
+                <!-- novedades con flexbox -->
+                <article class="lanzamientos-card">
+                    <img src="" alt="nov 1">
+                    <h3>nov</h3>
+                    <p class="autor">jk</p>
+                    <p class="precio">$</p>
+                    <button class="btn">Añadir al carrito</button>
+                </article>
+
+                <article class="lanzamientos-card">
+                    <img src="" alt="nov 1">
+                    <h3>nov</h3>
+                    <p class="autor">jk</p>
+                    <p class="precio">$</p>
+                    <button class="btn">Añadir al carrito</button>
+                </article>
+
+                <article class="lanzamientos-card">
+                    <img src="" alt="nov 1">
+                    <h3>nov</h3>
+                    <p class="autor">jk</p>
+                    <p class="precio">$</p>
+                    <button class="btn">Añadir al carrito</button>
+                </article>
+
+                <article class="lanzamientos-card">
+                    <img src="" alt="nov 1">
+                    <h3>nov</h3>
+                    <p class="autor">jk</p>
+                    <p class="precio">$</p>
+                    <button class="btn">Añadir al carrito</button>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- seccion ofertas -->
+        <section id="ofertas" class="section-ofertas">
+            <h2 class="section-title">Ofertas especiales</h2>
+            <div class="separador"></div>
+            <div class="ofertas-container">
+                <!-- ofertas con descuentos -->
+                <article class="oferta-card">
+                    <img src="" alt="of1">
+                    <h3>Gran oferta</h3>
+                    <p class="autor">hjk</p>
+                    <p class="precio">$</p>
+                    <button class="btn">Añadir al carrito</button>
+                </article>
+
+                <article class="oferta-card">
+                    <img src="" alt="of1">
+                    <h3>Gran oferta</h3>
+                    <p class="autor">hjk</p>
+                    <p class="precio">$</p>
+                    <button class="btn">Añadir al carrito</button>
+                </article>
+
+                <article class="oferta-card">
+                    <img src="" alt="of1">
+                    <h3>Gran oferta</h3>
+                    <p class="autor">hjk</p>
+                    <p class="precio">$</p>
+                    <button class="btn">Añadir al carrito</button>
+                </article>
+
+                <article class="oferta-card">
+                    <img src="" alt="of1">
+                    <h3>Gran oferta</h3>
+                    <p class="autor">hjk</p>
+                    <p class="precio">$</p>
+                    <button class="btn">Añadir al carrito</button>
+                </article>
+
+            </div>
+        </section>
+        
+        <!-- reseñas con grid -->
+        <section id="resenas" class="section-resenas">
+            <h2 class="section-title">Lo que dicen nuestros lectores</h2>
+            <div class="separador"></div>
+            <div class="resenas-grid-container">
+
+                <div class="resenas-card">
+                    <div class="resenas-info">
+                        <img src="#" alt="Usuario 2">
+                        <h4>Laura Gonzalez</h4>
+                    </div>
+                    <div class="calificacion">★★★★★</div>
+                    <p class="resenas-texto">"Servicio excelente, mi libro llegó antes de lo esperado y en perfectas condiciones."</p>
+                </div>
+
+                <div class="resenas-card">
+                    <div class="resenas-info">
+                        <img src="#" alt="Usuario 2">
+                        <h4>Carlos Milla</h4>
+                    </div>
+                    <div class="calificacion">★★★★★</div>
+                    <p class="resenas-texto">"Gran variedad de títulos. He encontrado libros que buscaba hace tiempo."</p>
+                </div>
+
+                <div class="resenas-card">
+                    <div class="resenas-info">
+                        <img src="#" alt="Usuario 3">
+                        <h4>Maria Jimenes</h4>
+                    </div>
+                    <div class="calificacion">★★★★★</div>
+                    <p class="resenas-texto">"Las ofertas son increíbles, me encanta la sección de novedades."</p>
+                </div>
+
+                <div class="resenas-card">
+                    <div class="resenas-info">
+                        <img src="#" alt="Usuario 4">
+                        <h4>Matias Martin</h4>
+                    </div>
+                    <div class="calificacion">★★★★★</div>
+                    <p class="resenas-texto">"Interfaz muy intuitiva y fácil de usar. Recomendado."</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- formulario de contacto -->
+        <section id="contacto" class="section-contacto">
+            <h2 class="section-title">Contáctanos</h2>
+            <div class="separador"></div>
+            <div class="contacto-container">
+                <div class="contacto-info">
+                    <h3>Tienes alguna pregunta?</h3>
+                    <p>Completa el formulario y te responderemos a la brevedad!</p>
+                    <div class="contacto-detalles">
+                        <p><i class="fas fa-envelope"></i>info@libroptopus.com</p>
+                        <p><i class="fas fa-phone"></i>+54 9 2323 853071</p>
+                    </div>
+                </div>
+
+                <form action="https://formspree.io/f/movdzwep" method="post" class="contacto-form">
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo electronico</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Escribe tu mensaje aqui...."></textarea>    
+                    </div>
+                    <button type="submit" class="btn-submit">Enviar mensaje</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- pie de pagina con info de contacto -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-columna">
+                <h3>Libroptopus</h3>
+                <div class="separador"></div>
+                <p>Tu tienda online de libros favorita, con la mayor variedad de títulos y los mejores precios.</p>
+            </div>
+
+            <div class="footer-columna">
+                <h3>Enlaces rapidos</h3>
+                <div class="separador"></div>
+                <ul class="footer-links">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#catalogo">Catálogo</a></li>
+                    <li><a href="#novedades">Novedades</a></li>
+                    <li><a href="#ofertas">Ofertas</a></li>
+                    <li><a href="#resenas">Reseñas</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-columna">
+                <h3>Síguenos</h3>
+                <div class="separador"></div>
+                <div class="social-iconos">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-columna">
+                <h3>Newsletter</h3>
+                <div class="separador"></div>
+                <p>Suscríbete para recibir noticias sobre nuevos lanzamientos y ofertas exclusivas.</p>
+                <form action="newsletter-form" class="footer-newsletter">
+                    <input type="email" placeholder="Tu correo electrónico" required>
+                    <button type="submit">Suscribirse</button>
+                </form>
+            </div>
+        </div>
+
+        <nav class="footer-copy">
+            <p>&copy;2025 Libroptopus. Todos los derechos reservados</p>
+        </nav>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,95 @@
+/* botones, cards, formularios */
+.btn,
+.carrito{
+    display: inline-block;
+    background-color: #9775fa;
+    color: #ffffff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover,
+.carrito:hover{
+    background-color: #7d5de7;
+}
+
+.section-contacto{
+    padding: 64px   32px;
+    background-color: #0f0f1a;
+    color: #fff;
+}
+
+.contacto-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 48px;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 1000px;
+    margin: 0   auto;
+    padding: 32px;
+    background-color: #1e1e2f;
+    border-radius: 12px;
+    box-shadow: 0   0   15px    rgba(255, 255, 255, 0.1);
+}
+
+.contacto-info{
+    flex: 1 1   300px;
+}
+
+.contacto-form,
+.formulario{
+    flex: 1 1   300px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background-color: #1e1e1e;
+    padding: 32px;
+    border-radius: 8px;
+    box-shadow: 0   2px 8px rgba(0, 0, 0, 0.4);
+    max-width: 600px;
+    margin: 0   auto;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea{
+    padding: 12px;
+    border: 1px solid   #a855f7;
+    border-radius: 8px;
+    background-color: #1f1f2e;
+    color: #fff;
+    font-size: 1rem;
+    transition: border-color    0.3s    ease;
+}
+
+textarea::placeholder{
+    color: #ccc;
+    font-style: italic;
+}
+
+.btn-submit{
+    background-color: #a855f7;
+    color: white;
+    padding: 12px    16px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s    ease;
+}
+
+.btn-submit:hover{
+    background-color: #9333ea;
+}

@@ -1,0 +1,20 @@
+/* botones, cards, formularios */
+
+/* botones */
+.btn-primary{
+    display: inline-block;
+    background-color: var(--color-accent);
+    color: white;
+    padding: 12px   24px    ;
+    border-radius: 4px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: backround-color 0.3s    ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary:hover{
+    
+}

@@ -1,0 +1,102 @@
+body {
+    margin: 2rem;
+    font-size: 2rem;
+    font-family: sans-serif;
+    background-color: #000;
+}
+
+h1 {
+    color: #fff;
+
+}
+
+
+.static{
+    background-color: #df6f6f;
+}
+.relative{
+    background-color: #81c476;
+}
+.absolute{
+    background-color: #fc9191;
+}
+.fixed{
+    background-color: #a8d5e2;
+}
+.sticky {
+    background-color: #e1e1ac;
+}
+
+/* -------------------------------- */
+/* CSS Position */
+/* es el posicionamiento natural de todos los elementos en html */
+/* .static{
+    position: static;
+} */
+
+/* ------------------------------------- */
+/* me permite añadir desplazamientos */
+/* si uso todo junto la prioridad la tienen top y left
+/* .relative{
+    position: relative;
+    top: 60px;
+    left: 40px;
+    bottom: 60px;
+    right: 40px; 
+} */
+
+/* ------------------------------------ */
+/* se separa del flujo natural, esta como flotando */
+/* .contenedor {
+    position: relative;
+} */
+/* se ajusta al body mientras no tenga position en el contenedor */
+/* .absolute{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+} */
+
+/* -------------------------------------- */
+/* se sale del flujo natural del documento, como absolute, pero se posiciona con respecto al viewport */
+/* se usa mucho como boton que retorna al inicio */
+/* .fixed{
+    position: fixed;
+    bottom: 5%;
+    right: 10px;
+} */
+
+/* --------------------------------------- */
+/* me sigue hasta que se va del contenedor */
+/* ej cuando estoy leyendo y el titulo me sigue hasta llegar al otro titulo (el otro contenedor) */
+/* .sticky{
+    position: sticky;
+    top: 50vh;
+}
+body{
+    height: 300vh;
+} */
+
+/* ------------------------------------------------------- */
+/* z-index cambiamos el orden de como se muestran */
+/* .relative{
+    position: relative;
+    right: 20px;
+    top: 10px;
+    z-index: 1;
+}
+.absolute{
+    position: relative;
+    z-index: 2;
+    left: 30px;
+    bottom: 30px;
+}
+
+.static{
+    position: relative;
+    right: 40px;
+    top: 60px;
+    z-index: 3;
+} */
+
+/* ----------------------------------------------- */

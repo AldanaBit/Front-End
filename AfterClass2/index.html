@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="https://www.google.com">Multimedia</a></li>
+                <li><a href="#tablas">Tablas</a></li>
+                <li><a href="paginas/carrito.html">Carrito</a></li>
+            </ul>
+        </nav>
+       
+    </header>
+    <main>
+        <section id="inicio">
+            <h2>Tipos de Listas</h2>
+            <div>
+                
+                <h3>Listas ordenadas (pasos) :</h3>
+                <ol>
+                    <!-- listas ordenadas -->
+                    <li>Abrir el editor de codigo</li>
+                    <li>Escribir HTML</li>
+                    <li>Guardar como .html</li>
+                </ol>
+            <div>
+            <div>
+                <h3>Listas de definiciones :</h3>
+                <dl>
+                    <dt>HTML</dt>
+                    <dt>Lenguaje de marcado para estructura</dt>
+                    <dt>CSS</dt>
+                    <dt>Lenguaje para estilos</dt>
+                </dl>
+            </div>
+        <section> 
+        <section id="multimedia">
+            <h3>Imagen con enlace</h3>
+            <a href="https://www.w3schools.com/html/" target="_blank"> 
+                <img src="imagenes/logo.png" alt="Imagen de tentaculos de pulpo" width="300" >
+            <!-- _blank abre la web en otra pestaña -->
+            </a>
+            <h3>Reproductor de video</h3>
+            <video controls loop autoplay width="400">
+                <source src="video/video.mp4.mp4" type="video/mp4">
+                <!-- <source src="" type="webp"> -->
+                <!-- diferentes formatos del video -->
+                <track default src="video/Subtitulos.es.vtt" kind="subtitles" srclang="es" label="Español">
+                <track default src="video/Subtitulos.en.vtt" kind="subtitles" srclang="en" label="Ingles">
+
+            </video>
+            <!-- atributos comunes:
+            controls; poster; autoplay (cuidado xq va con otra etiqueta para q no dañe el video) -->
+    
+            <audio src=""></audio>
+            <!-- atributos comunes:
+            controls; autoplay; loop -->
+           
+
+        </section>    
+        <section id="tablas">
+            <h2>Ejemplo de tablas</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                        <th>Stock</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Laptop</td>
+                        <td>$1200</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td>Mouse</td>
+                        <td>$20</td>
+                        <td>50</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+
+        <form action="https://formspree.io/f/mgvaranj" method="post">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Correo electronico</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensaje">mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="4" cols="50" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    <main>       
+    
+    <footer>
+        <p>2025 Talento Tech - Ejemplo prctico</p>
+        <!-- enlace  -->
+        <a href="https://github.com/miguelDocente/comision25020_FrontEnd_JS">Clase grabada</a>
+
+    </footer>
+    
+</body>
+</html>

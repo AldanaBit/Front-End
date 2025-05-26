@@ -1,0 +1,112 @@
+/* Media Queries */
+
+/* Desktop medio */
+@media (max-width: 1200px){
+    .container{
+        width: 95%;
+    }
+
+    .product-card{
+        width: 45%;
+    }
+
+    .footer-column{
+        width: 48%;
+        margin-bottom: 30px;
+    }
+}
+
+/* tablets y dispositivos medianos */
+@media (max-width: 992px){
+    .hero-banner{
+        height: 60vh;
+    }
+
+    .section-title{
+        font-size: 1.8rem;
+    }
+
+    .contact-info,
+    .contact-form{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .reviews-grid{
+        grid-template-columns: repeat(2, 2fr);
+    }
+}
+
+/* dispositivos moviles horizontales y teblets pequeñas */
+@media (max-width: 768px){
+    header{
+        flex-direction: column;
+        padding: 10px   5%;
+    }
+
+    .logo-container{
+        margin-bottom: 15px;
+    }
+
+    nav ul{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul li{
+        margin: 5px 10px;
+    }
+
+    .product-card{
+        width: 100%;
+    }
+
+    .product-filters{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .filter-group{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+/* dispositivos moviles */
+@media (max-width: 576px){
+    .hero-banner{
+        height: 50vh;
+    }
+
+    .hero-banner h1{
+        font-size: 1.8rem;
+    }
+
+    .reviews-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .footer-column{
+        width: 100%;
+    }
+
+    .btn-primary{
+        padding: 10px   15px;
+        font-size: 0.9rem;
+    }
+
+    .section-title{
+        font-size: 1.5rem;
+    }
+}
+
+/* dispositivos muy pequeños */
+@media (max-width: 320px){
+    .hero-banner h1{
+        font-size: 1.5rem;
+    }
+
+    .product-image{
+        height: 200px;
+    }
+}

@@ -1,0 +1,131 @@
+/* variables de color para tema oscuro */
+/* pueden sobreescribir las de styles.ccs */
+
+:root{
+    --color-bg-primary: #121212;
+    --color-bg-secondary: #1e1e1e;
+    --color-bg-element: #2d2d2d;
+    --color-text-primary: #e0e0e0;
+    --color-text-secondary: #b0b0b0;
+    --color-accent: #9775fa;
+    --color-accent-hover: #7d5de7;
+    --color-border: #3d3d3d;
+    --color-input-bg: #2a2a2a;
+    --color-input-text: #e0e0e0;
+    --color-input-placeholder: #7a7a7a;
+    --color-success: #81c784;
+    --color-error: #e57373;
+    --color-warning: #ffb74d;
+    --color-info: #64b5f6;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+/* elementos especificos del tema oscuro */
+body{
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+}
+
+/* estilos para los elementos de entrada */
+input,
+textarea,
+select,
+button{
+    background-color: var(--color-input-bg);
+    color: var(--color-input-text);
+    border: 1px solid   var(--color-border);
+}
+
+input::placeholder,
+textarea::placeholder{
+    color: var(--color-input-placeholder);
+}
+
+/* tarjetas y contenedores */
+.card,
+.product-card,
+.review-card,
+.info-box{
+    background-color: var(--color-bg-element);
+    border: 1px solid   var(--color-border);
+    box-shadow: 0   4px 8px var(--shadow-color);
+}
+
+/* barra de navegacion y header */
+header,
+nav,
+footer{
+    background-color: var(--color-bg-secondary);
+}
+
+/* enlaces y botones */
+a:not(.btn-primary){
+    color: var(--color-accent);
+}
+
+a:hover:not(.btn-primary){
+    color: var(--color-accent-hover);
+}
+
+/* personalizacion de la barra de desplazamiento */
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track{
+    background: var(--color-bg-secondary);
+}
+
+::-webkit-scrollbar-thumb{
+    background: var(--color-border);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: var(--color-accent);
+}
+
+/* estilos para tablas */
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td{
+    border: 1px solid   var(--color-border);
+    padding: 8px    12px;
+    text-align: left;
+}
+
+th{
+    background-color: var(--color-bg-secondary);
+}
+
+tr:nth-child(even){
+    background-color: rgba(45, 45, 45, 0.5);
+}
+
+/* estilos para mensajes y alertas */
+.alert{
+    padding: 12px   20px;
+    margin: 15px    0;
+    border-radius: 4px;
+}
+
+.alert-seccess{
+    background-color: rgba(129, 199, 132, 0.2);
+    border: 1px solid   var(--color-success);
+    color: var(--color-success);
+}
+
+.alert-error{
+    background-color: rgba(299, 115, 115, 0.2);
+    border: 1px solid   var(--color-error);
+    color: var(--color-error);
+}
+
+.alert-warning{
+    background-color: rgba(255, 183, 77, 0.2);
+    border: 1px solid   var(--color-warning);
+    columns: var(--color-warning);
+}
