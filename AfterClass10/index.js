@@ -45,3 +45,34 @@ if (productosFiltrados.length > 0) {
 }else {
     console.log("No se encontro ningun producto con esos criterios");
 }
+
+/* 
+=============================================================================
+RESUMEN DE CONCEPTOS CLAVE:
+=============================================================================
+
+OPERADORES PARA CONDICIONES:
+- Comparación: ==, ===, !=, !==, >, >=, <, <=
+- Lógicos: && (AND), || (OR), ! (NOT)
+
+CONDICIONALES:
+- if: ejecuta si verdadero
+- else: ejecuta si if es falso  
+- else if: condiciones adicionales
+- ternario: condición ? verdadero : falso
+- switch: múltiples casos con break
+
+CICLOS:
+- while: mientras condición verdadera
+- do-while: ejecuta mínimo una vez
+- for: cantidad definida (inicio; condición; incremento)
+- break: sale del ciclo
+- continue: salta iteración
+
+BUENAS PRÁCTICAS:
+- Usar === en lugar de == para comparaciones estrictas
+- Incrementar contador en while para evitar bucles infinitos  
+- Usar break en switch para evitar fall-through
+- Combinar operadores lógicos para condiciones complejas
+=============================================================================
+*/

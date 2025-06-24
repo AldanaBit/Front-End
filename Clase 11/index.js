@@ -17,10 +17,11 @@ saludar()
 
 function saludarPersonalizado(nombre) {
     console.log(`Bienvenido ${nombre}`)
+    console.log(`hola ${nombre}`)
 }
 
-saludarPersonalizado(`Agustin`)
-saludarPersonalizado(`Oscar`)
+saludarPersonalizado(`Agustin`);
+saludarPersonalizado(`Oscar`);
 
 // let nombre = prompt(`Cual es tu nombre?`)
 // saludarPersonalizado(nombre)
@@ -74,7 +75,7 @@ function saludar3(nombre, mostrar /*funcion */, mostrar2,parametros) {
     let nombre = capturar()
     const mensaje = `Hola ${nombre}`
     mostrar(mensaje)
-    mostrar2(mensaje)
+   // mostrar2(mensaje)
 }
 
 // saludar3(`Valeria`, imprimirConsola)
