@@ -10,8 +10,7 @@
     <!-- ESTILOS POR MODULOS -->
     <link rel="stylesheet" href="estilos/1-styles.css">
     <!-- RESPONSIVE -->
-    <!-- oscuro-claro -->
-    <script  src="script/8-toggle"></script> 
+    
     <title>Libroptopus</title>
 </head>
 <body>
@@ -26,6 +25,7 @@
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="pages/1-categorias.html">Categorías</a></li>
+                <li><a href="pages/8-recomendaciones.html">Recomendaciones</a></li>
                 <li><a href="pages/2-productos.html">Catálogo</a></li>
                 <li><a href="pages/3-novedades.html">Novedades</a></li>
                 <li><a href="pages/4-ofertas.html">Ofertas</a></li>
@@ -41,7 +41,7 @@
         </nav>
 
         <!-- boton modo oscuro-claro -->
-         <button id="toggle-theme" aria-label="Cambiar tema">¤</button>
+         <button id="toggle-theme">¤</button>
     </header>
 
     <main>
@@ -50,118 +50,12 @@
             <div class="hero-content">
                 <h3>Descubre mundos entre páginas</h3>
                 <p>Tu librería online con miles de títulos a un click de distancia</p>
-                <button class="btn" href="pages/2-productos.html">Ver catálogo</button>
+                <a class="btn" href="pages/2-productos.html">Ver catálogo</a>
             </div>
         </section>
 
-        <!-- seccion de categorias -->
-        <section class="section-categorias" id="categorias">
-            <h2 class="section-title">Explora por categorias</h2>
-            <div class="separador"></div>
-            <div class="categorias-container">
 
-            </div>
-        </section>
-
-        <!-- seccion de recomendaciones -->
-        <section class="section-recomendaciones" id="recomendaciones">
-            <h2 class="section-title">Recomendaciones</h2>
-            <div class="separador"></div>
-            <input type="text" id="buscador" placeholder="Buscar libros...">
-            <button id="buscarBtn">Buscar</button>
-            <div id="resultados" class="recomendaciones-container">
-
-            </div>
-        </section>
-
-        <!-- seccion de catalogo -->
-        <section class="section-catalogo" id="catalogo">
-            <h2 class="section-title">Nuestro Catálogo</h2>
-            <div class="separador"></div>
-            <div class="catalogo-busqueda">
-                <input type="text" id="buscadorCatalogo" placeholder="Buscar libro por título o autor...">
-                <button id="btnBuscarCatalogo">Buscar</button>
-            </div>
-            <div class="catalogo-container">
-
-            </div>
-        </section>
-
-        <!-- carrito -->
-        <section id="mi-carrito">
-            <h2 class="section-title">Tu carrito</h2>
-            <div class="separador"></div>
-            <div id="carrito-container">
-
-            </div>
-        </section>
         
-        <!-- seccion novedades -->
-        <section class="section-novedades" id="novedades">
-            <h2 class="section-title">Novedades</h2>
-            <div class="separador"></div>
-            <div class="novedades-container">
-
-            </div>
-        </section>
-
-        <!-- seccion ofertas -->
-        <section class="section-ofertas" id="ofertas">
-            <h2 class="section-title">Ofertas especiales</h2>
-            <div class="separador"></div>
-            <div class="ofertas-container">
-
-            </div>
-        </section>
-
-        <!-- reseñas -->
-        <section class="section-resenas" id="resenas">
-            <h2 class="section-title">Lo que dicen nuestros lectores</h2>
-            <div class="separador"></div>
-            <div class="resenas-container">
-
-            </div> 
-
-        </section>
-
-        <!-- formulario de contacto -->
-        <section class="seccion-contacto" id="contacto">
-            <h2 class="section-title">Contáctanos</h2>
-            <div class="separador"></div>
-            <div class="contacto-container">
-                <div class="contacto-info">
-                    <h3>Tienes alguna pregunta?</h3>
-                    <p>Completa el formulario y te responderemos a la brevedad!</p>
-                    <div class="contacto-detalles">
-                        <p><i class="fas fa-envelope"></i>info@libroptopus.com</p>
-                        <p><i class="fas fa-phone"></i>+54 9 2323 853071</p>
-                    </div>
-                </div>
-
-                <form action="https://formspree.io/f/movdzwep" method="post" class="formulario-contacto" id="formulario-contacto">
-                    <div class="form-group">
-                        <label for="nombre">Nombre</label>
-                        <input type="text" id="nombre" name="nombre" required>
-                        <span class="error-msg" id="error-nombre"></span>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Correo electronico</label>
-                        <input type="email" id="email" name="email" required>
-                        <span class="error-msg" id="error-email"></span>
-                    </div>
-                    <div class="form-group">
-                        <label for="mensaje">Mensaje</label>
-                        <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Escribe tu mensaje aqui...."></textarea>
-                        <span class="error-msg" id="error-mensaje"></span>    
-                    </div>
-                    <button type="submit" class="btn-submit">Enviar mensaje</button>
-
-                </form>
-
-            </div>
-
-        </section> 
-
     </main>
 
 
@@ -214,6 +108,8 @@
         </nav>
     </footer>
 
-    <script src="script/main.js" defer></script>
+    <!-- oscuro-claro -->
+    <script  src="script/8-toggle"></script> 
+    <script src="script/main.js"></script>
 </body>
 </html>
