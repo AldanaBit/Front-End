@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FUENTES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+    <!-- ESTILOS POR MODULOS -->
+
+    <!-- RESPONSIVE -->
+    <title>Libroptopus</title>
+</head>
+<body>
+    <header class="header">
+        <!-- cabecera con logo y menu de navegacion -->
+        <a href="#" class="logo-link">
+            <img src="img/Logo.jpg" alt="Logo Libroptopus" width="80px" height="80px">
+            <span class="logo-texto">Libroptopus</span>
+        </a>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#categorias">Categorías</a></li>
+                <li><a href="#catalogo">Catálogo</a></li>
+                <li><a href="#novedades">Novedades</a></li>
+                <li><a href="#ofertas">Ofertas</a></li>
+                <li><a href="#resenas">Reseñas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li>
+                    <a href="cart.html">
+                        <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- banner principal -->
+        <section class="hero-banner" id="inicio">
+            <div class="hero-content">
+                <h3>Descubre mundos entre páginas</h3>
+                <p>Tu librería online con miles de títulos a un click de distancia</p>
+                <button class="btn" onclick="location.href='#catalogo'">Ver catálogo</button>
+            </div>
+        </section>
+
+        <!-- seccion de categorias -->
+        <section class="section-categorias" id="categorias">
+            <h2 class="section-title">Explora por categorias</h2>
+            <div class="separador"></div>
+            <div class="categorias-container">
+
+            </div>
+        </section>
+
+        <!-- seccion de recomendaciones -->
+        <section class="section-recomendaciones" id="recomendaciones">
+            <h2 class="section-title">Recomendaciones</h2>
+            <div class="separador"></div>
+            <input type="text" id="buscador" placeholder="Buscar libros...">
+            <button id="buscarBtn">Buscar</button>
+            <div id="resultados" class="recomendaciones-container">
+
+            </div>
+        </section>
+
+        <!-- seccion de catalogo -->
+        <section class="section-catalogo" id="catalogo">
+            <h2 class="section-title">Nuestro Catálogo</h2>
+            <div class="separador"></div>
+            <div class="catalogo-busqueda">
+                <input type="text" id="buscadorCatalogo" placeholder="Buscar libro por título o autor...">
+                <button id="btnBuscarCatalogo">Buscar</button>
+            </div>
+            <div class="catalogo-container">
+
+            </div>
+        </section>
+
+        <!-- carrito -->
+        <section id="mi-carrito">
+            <h2 class="section-title">Tu carrito</h2>
+            <div class="separador"></div>
+            <div id="carrito-container">
+
+            </div>
+        </section>
+        
+        <!-- seccion novedades -->
+        <section class="section-novedades" id="novedades">
+            <h2 class="section-title">Novedades</h2>
+            <div class="separador"></div>
+            <div class="novedades-container">
+
+            </div>
+        </section>
+
+        <!-- seccion ofertas -->
+        <section class="section-ofertas" id="ofertas">
+            <h2 class="section-title">Ofertas especiales</h2>
+            <div class="separador"></div>
+            <div class="ofertas-container">
+
+            </div>
+        </section>
+
+        <!-- reseñas -->
+        <section class="section-resenas" id="resenas">
+            <h2 class="section-title">Lo que dicen nuestros lectores</h2>
+            <div class="separador"></div>
+            <div class="resenas-container">
+
+            </div> 
+
+        </section>
+
+        <!-- formulario de contacto -->
+        <section class="seccion-contacto" id="contacto">
+            <h2 class="section-title">Contáctanos</h2>
+            <div class="separador"></div>
+            <div class="contacto-container">
+                <div class="contacto-info">
+                    <h3>Tienes alguna pregunta?</h3>
+                    <p>Completa el formulario y te responderemos a la brevedad!</p>
+                    <div class="contacto-detalles">
+                        <p><i class="fas fa-envelope"></i>info@libroptopus.com</p>
+                        <p><i class="fas fa-phone"></i>+54 9 2323 853071</p>
+                    </div>
+                </div>
+
+                <form action="https://formspree.io/f/movdzwep" method="post" class="formulario-contacto" id="formulario-contacto">
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                        <span class="error-msg" id="error-nombre"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo electronico</label>
+                        <input type="email" id="email" name="email" required>
+                        <span class="error-msg" id="error-email"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Escribe tu mensaje aqui...."></textarea>
+                        <span class="error-msg" id="error-mensaje"></span>    
+                    </div>
+                    <button type="submit" class="btn-submit">Enviar mensaje</button>
+
+                </form>
+
+            </div>
+
+        </section> 
+
+    </main>
+
+
+    <!-- pie de pagina con info de contacto -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-columna">
+                <h3>Libroptopus</h3>
+                <div class="separador"></div>
+                <p>Tu tienda online de libros favorita, con la mayor variedad de títulos y los mejores precios.</p>
+            </div>
+
+            <div class="footer-columna">
+                <h3>Enlaces rapidos</h3>
+                <div class="separador"></div>
+                <ul class="footer-links">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#catalogo">Catálogo</a></li>
+                    <li><a href="#novedades">Novedades</a></li>
+                    <li><a href="#ofertas">Ofertas</a></li>
+                    <li><a href="#resenas">Reseñas</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-columna">
+                <h3>Síguenos</h3>
+                <div class="separador"></div>
+                <div class="social-iconos">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-columna">
+                <h3>Newsletter</h3>
+                <div class="separador"></div>
+                <p>Suscríbete para recibir noticias sobre nuevos lanzamientos y ofertas exclusivas.</p>
+                <form action="newsletter-form" class="footer-newsletter" id="newsletter-form">
+                    <input type="email" placeholder="Tu correo electrónico" id="newsletter-email" required>
+                    <span class="error-msg" id="error-newslatter-email"></span>
+                    <button type="submit" id="btn-newsletter">Suscribirse</button>
+                </form>
+            </div>
+        </div>
+
+        <nav class="footer-copy">
+            <p>&copy;2025 Libroptopus. Todos los derechos reservados</p>
+        </nav>
+    </footer>
+
+</body>
+</html>

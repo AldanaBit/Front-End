@@ -1,0 +1,36 @@
+/* .libros-container y .libro-card */
+
+.libros-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.libro-card{
+    background-color: #1e1e1e;
+    border: 1px solid   #97755f;
+    border-radius: 8px;
+    padding: 16px;
+    color: #fff;
+    text-align: center;
+}
+
+/* productos y componentes */
+
+.producto-card{
+    width: 200px;
+    background-color: #1e1e1e;
+    color: #fff;
+    padding: 16px;
+    border: 1px solid   #97755f;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.carrito-item{
+    background-color: #1e1e1e;
+    margin-bottom: 8px;
+    padding: 8px;
+    border-radius: 6px;
+}
