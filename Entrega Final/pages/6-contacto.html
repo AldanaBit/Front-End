@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+</head>
+<body>
+    <!-- formulario de contacto -->
+        <section class="seccion-contacto" id="contacto">
+            <h2 class="section-title">Contáctanos</h2>
+            <div class="separador"></div>
+            <div class="contacto-container">
+                <div class="contacto-info">
+                    <h3>Tienes alguna pregunta?</h3>
+                    <p>Completa el formulario y te responderemos a la brevedad!</p>
+                    <div class="contacto-detalles">
+                        <p><i class="fas fa-envelope"></i>info@libroptopus.com</p>
+                        <p><i class="fas fa-phone"></i>+54 9 2323 853071</p>
+                    </div>
+                </div>
+
+                <form action="https://formspree.io/f/movdzwep" method="post" class="formulario-contacto" id="formulario-contacto">
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                        <span class="error-msg" id="error-nombre"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo electronico</label>
+                        <input type="email" id="email" name="email" required>
+                        <span class="error-msg" id="error-email"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Escribe tu mensaje aqui...."></textarea>
+                        <span class="error-msg" id="error-mensaje"></span>    
+                    </div>
+                    <button type="submit" class="btn-submit">Enviar mensaje</button>
+
+                </form>
+
+            </div>
+
+        </section> 
+</body>
+</html>
