@@ -8,8 +8,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
     <!-- ESTILOS POR MODULOS -->
-
+    <link rel="stylesheet" href="estilos/1-styles.css">
     <!-- RESPONSIVE -->
+    <!-- oscuro-claro -->
+    <script  src="script/8-toggle"></script> 
     <title>Libroptopus</title>
 </head>
 <body>
@@ -22,13 +24,14 @@
 
         <nav class="navbar">
             <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#categorias">Categorías</a></li>
-                <li><a href="#catalogo">Catálogo</a></li>
-                <li><a href="#novedades">Novedades</a></li>
-                <li><a href="#ofertas">Ofertas</a></li>
-                <li><a href="#resenas">Reseñas</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="pages/1-categorias.html">Categorías</a></li>
+                <li><a href="pages/2-productos.html">Catálogo</a></li>
+                <li><a href="pages/3-novedades.html">Novedades</a></li>
+                <li><a href="pages/4-ofertas.html">Ofertas</a></li>
+                <li><a href="pages/5-resenas.html">Reseñas</a></li>
+                <li><a href="pages/6-contacto.html">Contacto</a></li>
+                <li><a href="pages/7-carrito.html">Carrito</a></li>
                 <li>
                     <a href="cart.html">
                         <i class="fa fa-shopping-bag" aria-hidden="true"></i>
@@ -36,6 +39,9 @@
                 </li>
             </ul>
         </nav>
+
+        <!-- boton modo oscuro-claro -->
+         <button id="toggle-theme" aria-label="Cambiar tema">¤</button>
     </header>
 
     <main>
@@ -44,7 +50,7 @@
             <div class="hero-content">
                 <h3>Descubre mundos entre páginas</h3>
                 <p>Tu librería online con miles de títulos a un click de distancia</p>
-                <button class="btn" onclick="location.href='#catalogo'">Ver catálogo</button>
+                <button class="btn" href="pages/2-productos.html">Ver catálogo</button>
             </div>
         </section>
 
@@ -172,12 +178,12 @@
                 <h3>Enlaces rapidos</h3>
                 <div class="separador"></div>
                 <ul class="footer-links">
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#catalogo">Catálogo</a></li>
-                    <li><a href="#novedades">Novedades</a></li>
-                    <li><a href="#ofertas">Ofertas</a></li>
-                    <li><a href="#resenas">Reseñas</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="pages/2-productos.html">Catálogo</a></li>
+                    <li><a href="pages/3-novedades.html">Novedades</a></li>
+                    <li><a href="pages/4-ofertas.html">Ofertas</a></li>
+                    <li><a href="pages/5-resenas.html">Reseñas</a></li>
+                    <li><a href="pages/6-contacto.html">Contacto</a></li>
                 </ul>
             </div>
 
@@ -208,5 +214,6 @@
         </nav>
     </footer>
 
+    <script src="script/main.js" defer></script>
 </body>
 </html>
