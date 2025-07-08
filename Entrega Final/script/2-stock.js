@@ -355,3 +355,63 @@ const productos = [
         img: "https://covers.openlibrary.org/olid/OL47109239M-M"
     },
 ]
+
+// contenedor donde iran las cards
+const productosContainer = document.getElementById('catalogo-container');
+
+// Crear una card por cada producto en el array
+productos.forEach(producto => {
+    // Crear el div principal de la card
+    const card = document.createElement('div');
+    card.classList.add('producto-card'); // Añadirle la clase CSS
+
+    // Crear los elementos internos de la card
+    const image = document.createElement('img');
+    image.src = producto.img;
+    image.alt = producto.titulo;
+
+    const titulo = document.createElement('h3');
+    titulo.textContent = producto.titulo;
+
+    const autor = document.createElement('p');
+    autor.textContent = `Autor: ${producto.autor}`;
+
+    const precio = document.createElement('div');
+    precio.classList.add('precio');
+    precio.textContent = formatearPrecio(producto.precio);
+
+    const idioma = document.createElement('p');
+    idioma.textContent = `Idioma: ${producto.idioma}`;
+
+    const stock = document.createElement('p');
+    stock.textContent = `Stock: ${producto.stock}`;
+
+    // Añadir todos los elementos creados a la card
+    card.appendChild(image);
+    card.appendChild(titulo);
+    card.appendChild(autor);
+    card.appendChild(precio);
+    card.appendChild(idioma);
+    card.appendChild(stock);
+
+    // Añadir la card completa al contenedor en el HTML
+    productosContainer.appendChild(card);
+});
+
+// const productosContainer = document.getElementById('catalogo-container');
+// // con .map
+// const cardsHtml = productos.map(producto => {
+//     return `
+//         <div class="producto-card">
+//             <img src="${producto.img}" alt="${producto.titulo}">
+//             <h3>${producto.titulo}</h3>
+//             <p>Autor: ${producto.autor}</p>
+//             <div class="precio">${formatearPrecio(producto.precio)}</div>
+//             <p>Idioma: ${producto.idioma}</p>
+//             <p>Stock: ${producto.stock}</p>
+//         </div>
+//     `;
+// });
+
+// // Unimos todos los strings HTML de las cards y los insertamos en el contenedor
+// productosContainer.innerHTML = cardsHtml.join(' ');

@@ -1,3 +1,11 @@
+@import url('1-styles.css');
+@import url('2-componentes.css');
+@import url('3-layout.css');
+@import url('4-hero.css');
+@import url('5-header.css');
+@import url('6-productos.css');
+@import url('7-footer.css');
+@import url('8-responsive.css');
 
 .merriweather-uniquifier {
   font-family: "Merriweather", serif;

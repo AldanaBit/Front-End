@@ -1,11 +1,25 @@
-.error-msg{
-    color: #f87171;
-    font-size: 14px;
-    margin-top: 4px;
-    display: none;
+.alerta{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #9775fa;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-input.error,
-textarea.error {
-    border-color: #f87171;
+.alerta info{
+    background-color: #3b82f6;
 }
+
+.alerta.success{
+    background-color: #10b981;
+}
+
+.alerta.error{
+    background-color: #ef4444;
+}
+
