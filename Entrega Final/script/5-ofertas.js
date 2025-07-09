@@ -1,0 +1,53 @@
+document.addEventListener('DOMContentLoaded', async() => {
+    const contenedor = Document.querySelector('.ofertas-container');
+    contenedor.innerHTML = 'Cargando ofertas...';
+
+    //esta API no tiene para darme libros random, consulte con chat como obtener libros aleatorios y me recomendo que busque por letra y las vaya cambiando para q parezca lo mas aleatorio posible
+    const letras = 'abcdefghijklmnopqrstuvwxyz'.split('');
+    const letraRandom = letras[Math.floor(Math.random()* letras.length)];
+
+    try {
+        const res = await fetch(`https://openlibrary.org/search.json?q=${letraRandom}&limit=15`);
+        const data = await res.json();
+        contenedor.innerHTML = '';
+        const librosConPortada = data.docs.filter(libro => libro.cover_i).slice(0,8); // Filtrar los libros que tienen portada
+        librosConPortada.forEach(libro => {
+            const precioOriginal = (Math.random()* 50000 + 6000).toFixed(2); // Generar un precio original aleatorio entre 6000 y 56000
+            const precioOferta = (precioOriginal * (Math.random() * 0.2 + 0.20).toFixed(2)); // Generar un precio de oferta entre 20% y 40% menos que el original
+            const portada = `https://covers.openlibrary.org/b/id/${libro.cover_i}-M.jpg`; // URL de la portada del libro
+            const card = document.createElement('div');
+            card.classList.add('oferta-card');
+            card.innerHTML = `
+                <img src="${portada}" alt="${libro.title}">
+                <h3>${libro.title}</h3>
+                <p class="autor">Autor: ${libro.author_name ? libro.author_name.join(', ') : 'Desconocido'}</p>
+                <p class="precio">
+                <span class="antes">Precio Original: $${precioOriginal}</span>
+                <span class="ahora">Precio Oferta: $${precioOferta}</span>
+                </p>
+                <button class="btn-agregar-carrito" id="btn-agregar-${libro.key}">Agregar al carrito</button>
+            `;
+            contenedor.appendChild(card);
+
+            const btnAgregar = card.querySelector('.btn-agregar-carrito');
+            btnAgregar.addEventListener('click', () => {
+                const itemCarrito = {
+                    id: libro.key,
+                    titulo: libro.title,
+                    autor: libro.author_name ? libro.author_name.join(', ') : 'Desconocido',
+                    precio: Number(precioOferta),
+                    portada: portada,
+                };
+
+                const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+                carrito.push(itemCarrito);
+                localStorage.setItem('carrito', JSON.stringify(carrito));
+                alert(`${libro.title} ha sido agregado al carrito.`);
+            });    
+        });
+    } catch (error) {
+        contenedor.innerHTML = 'Error al cargar las ofertas. Inténtalo de nuevo más tarde.';
+        console.error(error);
+    }
+});
+

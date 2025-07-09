@@ -63,7 +63,57 @@ function formatearPrecio(numero) {
     return `$${numero.toFixed(2)}`; 
 }
 
+//--------------------------------------------------------------------------------------------------------------------------------------------------------
 
+// Newsletter
+
+document.addEventListener('DOMContentLoaded', () => {
+    const formularioNewsletter = document.getElementById('newsletter-form');
+    const emailNewsletter = document.getElementById('newsletter-email');
+    const errorNewsletter = document.getElementById('error-newsletter-email');
+
+    if (formularioNewsletter && emailNewsletter) {
+        const esCorreoValido = (correo) => {
+        const regexCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return regexCorreo.test(correo);
+        };
+
+        const mostrarError = (input, mensaje) => {
+            const contenedor = input.parentNode;
+            contenedor.classList.add('error');
+            errorNewsletter.innerText = mensaje;
+        };
+
+        const limpiarError =  (input) => {
+            const contenedor = input.parentNode;
+            contenedor.classList.remove('error');
+            errorNewsletter.innerText = '';
+        };
+
+        emailNewsletter.addEventListener('change', () =>{
+            const campo = emailNewsletter.ariaValueMax.trim();
+            if (campo === '') {
+                mostrarError(errorNewsletter, 'El correo electrónico es obligatorio.');
+            } else if (!esCorreoValido(campo)) {
+                mostrarError(emailNewsletter, 'Ingresa un correo electrónico válido.');
+            } else {
+                limpiarError(emailNewsletter);
+            }
+        });
+
+        formularioNewsletter.addEventListener('submit', (evento) => {
+            const campo = emailNewsletter.ariaValueMax.trim();
+
+            if (campo === '' || !esCorreoValido(campo)) {
+                evento.preventDefault();
+                mostrarError(emailNewsletter, campo === '' ? 'El correo electrónico es obligatorio.' : 'Ingresa un correo electrónico válido.');
+            } else {
+                limpiarError(emailNewsletter);
+                console.log('Gracias por suscribirse a nuestro Newsletter!');
+            }
+        });
+    }
+});
 
 
 
