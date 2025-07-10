@@ -50,6 +50,21 @@
         <h2 class="section-title">Nuestro Catálogo</h2>
         <div class="separador"></div>
         <div class="catalogo-busqueda">
+            <select name="filtro-categorias" id="filtroCategorias">
+                <option value="">Todas las categorías</option>
+                <option value="Ficcion">Ficcion</option>
+                <option value="No Ficcion">No Ficcion</option>
+                <option value="Romance">Romance</option>
+                <option value="Ciencia Ficcion">Ciencia Ficción</option>
+                <option value="Terror">Terror</option>
+            </select>
+
+            <select name="filtro-idioma" id="filtroIdioma">
+                <option value="">Todos los idiomas</option>
+                <option value="es">Español</option>
+                <option value="en">Inglés</option>
+            </select>
+
             <input type="text" id="buscadorCatalogo" placeholder="Buscar libro por título o autor...">
             <button id="btnBuscarCatalogo">Buscar</button>
         </div>

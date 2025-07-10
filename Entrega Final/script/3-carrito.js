@@ -1,21 +1,25 @@
-const contenedorProductos = document.getElementById('catalogo.container');
+const contenedorProductos = document.getElementById('catalogo-container');
 const contenedorCarrito = document.getElementById('carrito-container');
+
+// recuperar productos
+const productos = JSON.parse(localStorage.getItem('productos')) || [];
 
 // Inicializa carrito
 let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
 // Mostrar productos
 function mostrarLibros() {
+    contenedorProductos.innerHTML = '';
     productos.forEach(producto =>{
         const card = document.createElement('div');
         card.className = "producto-card";
         card.innerHTML = `
-                            <img src="${producto.imagen} alt="${producto.titulo}"">
+                            <img src="${producto.imagen}" alt="${producto.titulo}">
                             <h4>${producto.titulo}</h4>
                             <p class="autor">${producto.autor}</p>
                             <p>$ ${producto.precio}</p>
                             <p>Stock: ${producto.stock}</p>
-                            <button class="btn-agregar" id="${producto.id}">Agregar al carrito </button>
+                            <button class="btn-agregar" data-id="${producto.id}">Agregar al carrito </button>
                         `;
         contenedorProductos.appendChild(card);                
     });
@@ -56,7 +60,7 @@ function mostrarCarrito(){
         div.innerHTML = `
                             
                             <h4>${item.titulo}</h4>
-                            <p class="autor">${producto.autor}</p>
+                            <p class="autor">${item.autor}</p>
                             <p>$ ${item.precio} x ${item.cantidad}</p>
                             <button class="btn-eliminar" id="${item.id}">Eliminar</button>
                         `;
@@ -65,7 +69,7 @@ function mostrarCarrito(){
 
     document.querySelectorAll('.btn-eliminar').forEach(btn => {
         btn.addEventListener('click', () =>{
-            carrito = carrito.filter(p => p.id !== parseInt(btn.CDATA_SECTION_NODE.id));
+            carrito = carrito.filter(p => p.id !== parseInt(btn.id));
             localStorage.setItem("carrito", JSON.stringify(carrito));
             mostrarCarrito();
         });
