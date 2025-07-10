@@ -1,0 +1,103 @@
+/* ------------ */
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0   auto;
+    padding: 0  15px;
+}
+
+.section-title{
+    text-align: center;
+    margin-bottom: 32px;
+    font-size: 36px;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+.categorias-container,
+.productos-container,
+.nuevos-lanzamientos-container,
+.ofertas-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+}
+
+.resenas-grid-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 30px;
+}
+
+/* oscuro/claro */
+
+/* modo oscuro */
+body.dark-theme {
+  background-color: #121212;
+  color: #f5f5f5;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme h3,
+body.dark-theme h4,
+body.dark-theme h5,
+body.dark-theme h6,
+body.dark-theme p,
+body.dark-theme a{
+  color: inherit;
+}
+
+body.dark-theme .section-catalogo,
+body.dark-theme .section-categorias,
+body.dark-theme .catalogo-busqueda,
+body.dark-theme .categorias-card,
+body.dark-theme .header,
+body.dark-theme .footer,
+body.dark-theme .navbar,
+body.dark-theme .section-title,
+body.dark-theme .producto-card,
+body.dark-theme .carrito-item,
+body.dark-theme .alerta,
+body.dark-theme .footer,
+body.dark-theme .footer-container,
+body.dark-theme .categorias-container,
+body.dark-theme .productos-container,
+body.dark-theme .nuevos-lanzamientos-container,
+body.dark-theme .ofertas-container{
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+  border-color: #333;
+}
+
+body.dark-theme button,
+body.dark-theme .btn,
+body.dark-theme .btn-agregar,
+body.dark-theme .btn-eliminar,
+body.dark-theme .btn-agregar-carrito{
+  background-color: #333;
+  color: #f5f5f5;
+  border: 1px solid #555;
+}
+
+body.dark-theme button:hover,
+body.dark-theme .btn-agregar:hover,
+body.dark-theme .btn-eliminar:hover,
+body.dark-theme .btn-agregar-carrito:hover{
+  background-color: #444;
+}
+
+body.dark-theme input,
+body.dark-theme textarea,
+body.dark-theme select{
+  background-color: #222;
+  color: #f5f5f5;
+  border: 1px solid #555;
+}
+
+body.dark-theme .separador{
+    background-color: #555;
+}

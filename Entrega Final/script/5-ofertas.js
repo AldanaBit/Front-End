@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', async() => {
-    const contenedor = Document.querySelector('.ofertas-container');
+    const contenedor = document.querySelector('.ofertas-container');
     contenedor.innerHTML = 'Cargando ofertas...';
 
     //esta API no tiene para darme libros random, consulte con chat como obtener libros aleatorios y me recomendo que busque por letra y las vaya cambiando para q parezca lo mas aleatorio posible
@@ -20,16 +20,18 @@ document.addEventListener('DOMContentLoaded', async() => {
             card.innerHTML = `
                 <img src="${portada}" alt="${libro.title}">
                 <h3>${libro.title}</h3>
-                <p class="autor">Autor: ${libro.author_name ? libro.author_name.join(', ') : 'Desconocido'}</p>
+                <p class="autor">${libro.author_name ? libro.author_name.join(', ') : 'Desconocido'}</p>
                 <p class="precio">
-                <span class="antes">Precio Original: $${precioOriginal}</span>
-                <span class="ahora">Precio Oferta: $${precioOferta}</span>
+                    <span class="antes">Precio Original: $${precioOriginal}</span>
+                    <span class="ahora">Precio Oferta: $${precioOferta}</span>
                 </p>
-                <button class="btn-agregar-carrito" id="btn-agregar-${libro.key}">Agregar al carrito</button>
+                <a href="#"  class="carrito" id="btn-agregar-${libro.key}">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
             `;
             contenedor.appendChild(card);
 
-            const btnAgregar = card.querySelector('.btn-agregar-carrito');
+            const btnAgregar = card.querySelector('.carrito');
             btnAgregar.addEventListener('click', () => {
                 const itemCarrito = {
                     id: libro.key,
