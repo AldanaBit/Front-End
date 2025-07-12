@@ -29,6 +29,15 @@ document.addEventListener('DOMContentLoaded', () =>{
     document.getElementById('filtroIdioma').addEventListener('change', aplicarFiltros);
 });
 
+function guardarEnHistorial(categoria) {
+    let historial = JSON.parse(localStorage.getItem('historialCategorias')) || [];
+
+    if (!historial.includes(categoria)) {
+        historial.push(categoria);
+        localStorage.setItem('historialCategorias', JSON.stringify(historial));
+    }
+}
+
 function cargarFiltos(productos) {
     const categorias = [...new
         Set(productos.map(prod => prod.categoria))];
@@ -71,12 +80,16 @@ function aplicarFiltros() {
         filtrados = filtrados.filter(producto =>
             producto.categoria === categoria
         );
+
+        guardarEnHistorial(categoria);
     }
 
     if (idioma !== '') {
         filtrados = filtrados.filter(producto =>
             producto.idioma === idioma
         );
+
+        guardarEnHistorial(idioma);
     }
 
     dibujarProductos(filtrados);
@@ -112,4 +125,3 @@ function crearProductoHTML(producto) {
 function agregarAlCarrito(id) {
     console.log('Producto agregado al carrito:', id);
 }
-

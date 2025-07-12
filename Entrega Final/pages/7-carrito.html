@@ -46,17 +46,60 @@
     </header>
 
     <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
-
-
     <!-- carrito -->
-    <section class="section-carrito" id="carrito">
-        <h2 class="section-title">Mi carrito</h2>
-        <div class="separador"></div>
-        <div id="carrito-container" class="productos-carrito">
 
-        </div>
-    </section>
-    
+    <main>
+        <section class="section-carrito" id="carrito">
+            <table width="100%">
+                <thead>
+                    <tr>
+                        <td>ELIMINAR</td>
+                        <td>IMAGEN</td>
+                        <td>PRODUCTO</td>
+                        <td>PRECIO</td>
+                        <td>CANTIDAD</td>
+                        <td>SUBTOTAL</td>
+                    </tr>
+                </thead>
+
+                <tbody id="tabla-carrito">
+                    <tr>
+                        
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="carrito-agregar" class="section-carrito-total">
+            <div id="cupon">
+                <h3>Aplicar Cupón</h3>
+                <div>
+                    <input type="text" placeholder="Ingresa tu cupón">
+                    <button class="btn-aplicar">Aplicar</button>
+                </div>
+            </div>
+
+            <div id="subtotal">
+                <h3>Total del Carrito</h3>
+                <table>
+                    <tr>
+                        <td>Subtotal del Carrito</td>
+                        <td id="total">$0</td>
+                    </tr>
+                    <tr>
+                        <td>Envío</td>
+                        <td>Gratis</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Total</strong></td>
+                        <td><strong id="total-ffinal">$0</strong></td>
+                    </tr>
+                </table>
+                <button class="pago">Proceder al Pago</button>
+            </div>
+        </section>
+    </main>
+
     <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 
     <!-- pie de pagina con info de contacto -->

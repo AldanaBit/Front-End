@@ -58,13 +58,35 @@
 
         <!-- formulario para reseñas -->
         <div class="formulario-resena">
-            <h3>Queres dejarnos tu reseña??</h3>
-            <form action="form-resena" id="form-resena">
-                <input type="text" id="resena-nombre" placeholder="Tu nombre" required>
-                <textarea name="resena-mensaje" id="resena-mensaje" placeholder="Escribinos tu opinión..." required></textarea>
-                <button type="submit">Enviar reseña</button>
+            <form action="#" id="form-resena">
+                <h3>Queres dejarnos tu reseña?</h3>
+                <div class="campo-control">
+                    <input type="text" id="resena-nombre" placeholder="Tu nombre" required>
+                    <span class="error-msg" id="error-nombre"></span>
+                </div>
+                
+                <div class="campo-control">
+                    <input type="email" id="resena-email" placeholder="Tu correo electrónico" required>
+                    <span class="error-msg" id="error-email"></span>
+                </div>
+                
+                <div class="campo-control">
+                    <textarea name="resena-mensaje" id="resena-mensaje" placeholder="Escribinos tu opinión..." required></textarea>
+                    <span class="error-msg" id="error-mensaje"></span>
+                </div>
+                
+                <div class="campo-estrellas" id="campo-estrellas">
+                    <label>Calificá con estrellas:</label>
+                    <div class="estrellas" id="estrellas-input">
+                        <span data-valor="1" class="estrella">☆</span>
+                        <span data-valor="2" class="estrella">☆</span>
+                        <span data-valor="3" class="estrella">☆</span>
+                        <span data-valor="4" class="estrella">☆</span>
+                        <span data-valor="5" class="estrella">☆</span>
+                    </div>
+                </div>
+                <button type="submit" class="btn-enviar-resena">Enviar reseña</button>
             </form>
-            <span class="error-msg" id="error-resena"></span>
         </div>
 
     </section>
@@ -145,7 +167,7 @@
     <!-- globales -->
     <script src="../script/main.js"></script>
     <!-- particular -->
-    <script src="../script/6-reseñas.js"></script> 
+    <script src="../script/6-resenas.js"></script> 
 
 </body>
 </html>

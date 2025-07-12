@@ -172,3 +172,77 @@ textarea::placeholder{
 .btn-submit:hover{
     background-color: #9333ea;
 }
+
+.formulario-resena{
+    margin: 40px    auto;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0   2px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.formulario-resena h3{
+    font-family: 'Merriweather', serif;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.formulario-resena form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.formulario-resena input,
+.formulario-resena textarea{
+    padding: 10px   15px;
+    font-size: 16px;
+    font-family: 'Handlee', cursive;
+    border: 1px solid   #ccc;
+    border-radius: 8px;
+}
+
+.formulario-resena textarea{
+    min-height: 100px;
+}
+
+.btn-enviar-resena{
+    background-color: transparent;
+    color: #6c3483;
+    border: 2px solid   #6c3483;
+    padding: 10px   20px;
+    font-family: 'Handlee', cursive;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s    ease;
+    border-radius: 8px;
+    opacity: 0.7;
+}
+
+.btn-enviar-resena:hover{
+    background-color: #6c3483;
+    color: #fff;
+    border-radius: 15px;
+    opacity: 1;
+}
+
+.error-msg{
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.mensaje-exito{
+    margin-top: 10px;
+    padding: 10px   15px;
+    background-color: #d4edda;
+    color: #155724;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid   #c3e6cb;
+}
