@@ -37,14 +37,19 @@ document.addEventListener('DOMContentLoaded', async () =>{
                                     <p class="producto-autor">${producto.autor}</p>
                                     <p class="producto-precio">$${producto.precio}</p>
                                     <p class="producto-idioma">${producto.idioma}</p>
-                                    <a href="#" class="carrito" onclick="agregarAlCarrito(${producto.id})">
+                                    <a href="#" class="carrito" id="btn-agregar-${producto.id}">
                                         <i class="fas fa-shopping-cart"></i>
                                     </a>
                                 </div>          
-                            ` 
+                            `; 
             contenedor.appendChild(card);
 
-            const btn = card.querySelector(`#btn-agregar-${producto.id}`);
+            const boton = card.querySelector(`#btn-agregar-${producto.id}`);
+            boton.addEventListener('click', (e) =>{
+                e.preventDefault();
+
+                agregarProductoAlCarrito(producto);
+            });
                             
         });
     } catch(error) {
@@ -52,3 +57,24 @@ document.addEventListener('DOMContentLoaded', async () =>{
         contenedor.innerHTML = 'No se pudieron cargar las recomendaciones. Intenta de nuevo más tarde.';
     }
 });
+
+function agregarProductoAlCarrito(producto) {
+    let carrito = JSON.parse(localStorage.getItem('carritoDeCompras')) || [];
+
+    const indiceProducto = carrito.findIndex(item => item.id === producto.id);
+
+    if (indiceProducto !== -1) {
+        carrito[indiceProducto].cantidad++;
+    } else{
+        carrito.push({
+            id: producto.id,
+            titulo: producto.titulo,
+            precio: producto.precio,
+            img: producto.img,
+            cantidad: 1
+        });
+    }
+
+    localStorage.setItem('carritoDeCompras', JSON.stringify(carrito));
+    alert(`${producto.titulo} agregado al carrito.`);
+}

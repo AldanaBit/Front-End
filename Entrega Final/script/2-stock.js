@@ -99,6 +99,8 @@ function aplicarFiltros() {
 function dibujarProductos(productos) {
     const container = document.getElementById('catalogo-container');
     container.innerHTML = productos.map(crearProductoHTML).join('');
+
+    adjuntarEventosCarrito(productos);
 }
 
 function crearProductoHTML(producto) {
@@ -113,7 +115,7 @@ function crearProductoHTML(producto) {
                             <p class="producto-precio">$${producto.precio}</p>
                             <p class="producto-idioma">${producto.idioma}</p>
                             <p class="producto-stock">Stock: ${producto.stock}</p>
-                            <a href="#" class="carrito" onclick="agregarAlCarrito(${producto.id})">
+                            <a href="#" class="carrito" id="btn-agregar-${producto.id}">
                                 <i class="fas fa-shopping-cart"></i>
                             </a>
                         </div>
@@ -122,6 +124,36 @@ function crearProductoHTML(producto) {
            ` 
 }
 
-function agregarAlCarrito(id) {
-    console.log('Producto agregado al carrito:', id);
+function adjuntarEventosCarrito(productos) {
+    productos.forEach(producto => {
+        const boton = document.getElementById(`btn-agregar-${producto.id}`);
+
+        if (boton) {
+            boton.addEventListener('click', (e) => {
+                e.preventDefault();
+                agregarProductoAlCarrito(producto);
+            });
+        }
+    });
+}
+
+function agregarProductoAlCarrito(producto) {
+let carrito = JSON.parse(localStorage.getItem('carritoDeCompras')) || [];
+
+    const indiceProducto = carrito.findIndex(item => item.id === producto.id);
+
+    if (indiceProducto !== -1) {
+        carrito[indiceProducto].cantidad++;
+    } else {
+        carrito.push({
+            id: producto.id,
+            titulo: producto.titulo,
+            precio: producto.precio,
+            img: producto.img,
+            cantidad: 1
+        });
+    }
+
+    localStorage.setItem('carritoDeCompras', JSON.stringify(carrito));
+    alert(`${producto.titulo} agregado al carrito.`);
 }

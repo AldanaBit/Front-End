@@ -12,8 +12,9 @@ document.addEventListener('DOMContentLoaded', async() => {
         contenedor.innerHTML = '';
         const librosConPortada = data.docs.filter(libro => libro.cover_i).slice(0,8); // Filtrar los libros que tienen portada
         librosConPortada.forEach(libro => {
-            const precioOriginal = (Math.random()* 50000 + 6000).toFixed(2); // Generar un precio original aleatorio entre 6000 y 56000
-            const precioOferta = (precioOriginal * (Math.random() * 0.2 + 0.20).toFixed(2)); // Generar un precio de oferta entre 20% y 40% menos que el original
+            const precioOriginal = (Math.random()* 50000 + 6000); // Generar un precio original aleatorio entre 6000 y 56000
+            const descuento = Math.random() * 0.2 + 0.2;
+            const precioOferta = precioOriginal * (1 - descuento); // Generar un precio de oferta entre 20% y 40% menos que el original
             const portada = `https://covers.openlibrary.org/b/id/${libro.cover_i}-M.jpg`; // URL de la portada del libro
             const card = document.createElement('div');
             card.classList.add('oferta-card');
@@ -38,12 +39,13 @@ document.addEventListener('DOMContentLoaded', async() => {
                     titulo: libro.title,
                     autor: libro.author_name ? libro.author_name.join(', ') : 'Desconocido',
                     precio: Number(precioOferta),
-                    portada: portada,
+                    img: portada,
+                    cantidad: 1
                 };
 
-                const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+                const carrito = JSON.parse(localStorage.getItem('carritoDeCompras')) || [];
                 carrito.push(itemCarrito);
-                localStorage.setItem('carrito', JSON.stringify(carrito));
+                localStorage.setItem('carritoDeCompras', JSON.stringify(carrito));
                 alert(`${libro.title} ha sido agregado al carrito.`);
             });    
         });
