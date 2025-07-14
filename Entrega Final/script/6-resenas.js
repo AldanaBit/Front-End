@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', () =>{
         const campos = [
             {elemento: nombre, mensajeVacio: 'Ingresá tu nombre.'},
             {elemento: correo, mensajeVacio: 'El correo electrónico es obligatorio.', mensajeInvalido: 'Ingresá un correo electrónico válido'},
-            {elemento: mensaje, mensajeVacio: 'Ingrsá tu opinión'}
+            {elemento: mensaje, mensajeVacio: 'Ingresá tu opinión'}
         ];
 
         let esValido = true;
@@ -176,7 +176,7 @@ document.addEventListener('DOMContentLoaded', () =>{
             const mensajeExito = document.createElement('p');
             mensajeExito.classList.add('mensaje-exito');
             mensajeExito.innerText = 'Gracias por su reseña !';
-            contenedorFormulario.appendChild(mensajeExito);
+            formularioResena.appendChild(mensajeExito);
 
             setTimeout(() => {
                 mensajeExito.remove();

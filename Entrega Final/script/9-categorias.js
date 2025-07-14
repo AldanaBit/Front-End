@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () =>{
     const contenedorBotones = document.querySelector('.botones-categorias');
 
     let productosCargados = [];
-    const libros = '../data/productos.json';
+    const libros = 'data/productos.json';
 
 
     fetch(libros)
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () =>{
                                 <p>${prod.idioma}</p>
                                 <p>${formatearPrecio(prod.precio)}</p>
                                 <a href="#" class="carrito" id="btn-agregar-${prod.id}">
-                                    <i class="fal fa-shopping-cart"></i>
+                                    <i class="fas fa-shopping-cart"></i>
                                 </a>
                             `;
 

@@ -23,8 +23,8 @@ document.addEventListener('DOMContentLoaded', async() => {
                 <h3>${libro.title}</h3>
                 <p class="autor">${libro.author_name ? libro.author_name.join(', ') : 'Desconocido'}</p>
                 <p class="precio">
-                    <span class="antes">Precio Original: $${precioOriginal}</span>
-                    <span class="ahora">Precio Oferta: $${precioOferta}</span>
+                    <span class="antes">Precio Original: $${formatearPrecio(precioOriginal)}</span>
+                    <span class="ahora">Precio Oferta: $${formatearPrecio(precioOferta)}</span>
                 </p>
                 <a href="#"  class="carrito" id="btn-agregar-${libro.key}">
                     <i class="fas fa-shopping-cart"></i>

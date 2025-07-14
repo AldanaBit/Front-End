@@ -9,22 +9,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Handlee&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap");
 
 
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Merriweather", serif;
+:root[data-bs-theme="light"]{
+  --bs-body-bg: #fdfdfd;
+  --bs-body-color: #1e1e1e;
+  --bs-primary: #4F3438;
+  --bs-secondary: #715D63;
+  --bs-tertiary: #B0A2A7;
+  --bs-link-color: #4F3438;
+  --bs-border-radius: 0.5rem;
 }
 
-html{
-  scroll-behavior: smooth;
+:root[data-bs-theme="dark"]{
+  --bs-body-bg: #0C0715;
+  --bs-body-color: #FFFFFF;
+  --bs-primary: #CA313F;
+  --bs-secondary: #461733;
+  --bs-tertiary: #1E1F46;
+  --bs-link-color: #CA313F;
+  --bs-border-radius: 0.5rem;
 }
 
-body {
-  width: 100%;
-  background-color: #fff;
-  color: #222;
-}
+
 
 /* fuentes */
 .merriweather-uniquifier {
@@ -41,42 +46,3 @@ body {
   font-weight: 400;
   font-style: normal;
 }
-
-/* Estilos Globales */
-
-h1 {
-  font-size: 50px;
-  line-height: 64px;
-  color: inherit;
-}
-
-h2 {
-  font-size: 46px;
-  line-height: 54px;
-  color: inherit;
-}
-
-h4 {
-  font-size: 20px;
-  color: inherit;
-}
-
-h6 {
-  font-weight: 700;
-  font-size: 12px;
-}
-
-p {
-  font-size: 16px;
-  color: #465b52;
-  margin: 15px 0 20px 0;
-}
-
-.section-p1 {
-  padding: 40px 80px;
-}
-
-.section-m1 {
-  margin: 40px 0;
-}
-

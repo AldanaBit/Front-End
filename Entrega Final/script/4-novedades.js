@@ -72,7 +72,7 @@ function adjuntarEventosCarrito() {
         const boton = document.getElementById(`btn-agregar-${producto.id}`);
         if (boton) { // Asegurarse de que el botón exista
             boton.addEventListener('click', () => {
-                agregarProductosAlCarrito(producto); // Llama a la función para agregar al carrito
+                agregarProductoAlCarrito(producto); // Llama a la función para agregar al carrito
             });
             
         }
@@ -80,7 +80,7 @@ function adjuntarEventosCarrito() {
 }
 
 // 5. Función para agregar productos a localStorage
-function agregarProductosAlCarrito(producto) {
+function agregarProductoAlCarrito(producto) {
     let carrito = JSON.parse(localStorage.getItem('carritoDeCompras')) || [];
     const productoExistente = carrito.findIndex(item => item.id === producto.id);
 

@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', async () =>{
     contenedor.innerHTML = 'Cargando recomendaciones...'
 
     try {
-        const response = await fetch('../data/productos.json');
+        const response = await fetch('data/productos.json');
         const productos = await response.json();
 
         // historial
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', async () =>{
                                     <span class="producto-categoria">${producto.categoria}</span>
                                     <h3 class="producto-titulo">${producto.titulo}</h3>
                                     <p class="producto-autor">${producto.autor}</p>
-                                    <p class="producto-precio">$${producto.precio}</p>
+                                    <p class="producto-precio">$${formatearPrecio(producto.precio)}</p>
                                     <p class="producto-idioma">${producto.idioma}</p>
                                     <a href="#" class="carrito" id="btn-agregar-${producto.id}">
                                         <i class="fas fa-shopping-cart"></i>
