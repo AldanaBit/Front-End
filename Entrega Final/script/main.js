@@ -22,6 +22,21 @@ function formatearPrecio(precio) {
     return `$${precio.toFixed(2)}`; 
 }
 
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+function actualizarCantidadCarrito() {
+    const carrito = JSON.parse(localStorage.getItem('carritoDeCompras')) || [];
+    const cantidad = carrito.reduce((accion, producto) => accion + producto.cantidad, 0);
+    const spanCantidad = document.getElementById('carrito-cantidad');
+
+    if (spanCantidad) {
+        spanCantidad.textContent = cantidad;
+        spanCantidad.style.display = cantidad > 0 ? 'inline-block' : 'none';
+    }
+}
+
+document.addEventListener('DOMContentLoaded', actualizarCantidadCarrito);
+
 //--------------------------------------------------------------------------------------------------------------------------------------------------------
 
 // Newsletter

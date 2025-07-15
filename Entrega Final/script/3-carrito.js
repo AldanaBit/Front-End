@@ -10,7 +10,7 @@ function cargarProductosCarrito() {
     let subtotalCalculado = 0;
 
     if (carrito.length === 0) {
-        document.querySelector('#tabla-carrito').innerHTML = '<tr><td colspan="6" style="text-align: center; padding: 20px;">Tu carrito está vacío. Agrega productos desde la <a href="../pages/2-productos.html">catálogo</a>.</td></tr>';
+        document.querySelector('#tabla-carrito').innerHTML = '<tr><td colspan="6" style="text-align: center; padding: 20px;">Tu carrito está vacío. Agrega productos desde el <a href="../pages/2-productos.html">catálogo</a>.</td></tr>';
     } else{
         carrito.forEach(producto => {
             const filaHTML = crearFilaProducto(producto);
@@ -24,14 +24,14 @@ function cargarProductosCarrito() {
 }
 
 function crearFilaProducto(producto) {
-    const productoSubtotal = (producto.precio * producto.cantidad).toFixed(2);
-    const tituloCorto = producto.titulo.substring(0, 10) + '...';
+    const productoSubtotal = (Number(producto.precio || 0) * (producto.cantidad || 1)).toFixed(2);
+    const tituloCorto = producto.titulo ? producto.titulo.substring(0, 10) + '...' : 'Sin título';
     return `
                 <tr>
-                    <td><button id="${producto.id}" class="remove-btn"><i class="far fa-times-circle"></i> </button> </td>
-                    <td><img src="${producto.img}" alt="${producto.titulo}" style="height: 80px; width: auto; object-fit: contain;"></td>
+                    <td><button data-id="${producto.id}" class="remove-btn"><i class="far fa-times-circle"></i> </button> </td>
+                    <td><img src="${producto.img || '../img/placeholder.jpg'}" alt="${producto.titulo || 'Sin título'}" style="height: 80px; width: auto; object-fit: contain;"></td>
                     <td>${tituloCorto}</td>
-                    <td>$${producto.precio.toFixed(2)}</td>
+                    <td>$${Number(producto.precio || 0).toFixed(2)}</td>
                     <td><input type="number" value="${producto.cantidad || 1}" min="1" id="${producto.id}" class="cantidad-producto"></td>
                     <td>$${productoSubtotal}</td>
                 </tr>    
@@ -55,7 +55,7 @@ function eventosFila() {
     document.querySelectorAll('.remove-btn').forEach(boton => {
         boton.addEventListener('click', () =>{
             const carrito = JSON.parse(localStorage.getItem('carritoDeCompras')) || [];
-            const id = boton.id;
+            const id = boton.dataset.id;
             const index = carrito.findIndex(producto => producto.id == id);
 
             if (index !== -1) {

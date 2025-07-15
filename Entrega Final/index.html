@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- FUENTES -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Handlee&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <!-- fontawesome -->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
     <!-- BOOTSTRAP -->
@@ -19,26 +19,24 @@
     
     <title>Libroptopus</title>
 </head>
-<body>
+<body data-bs-theme="light">
     <header class="header">
         <!-- cabecera con logo y menu de navegacion -->
 
-        <nav class="navbar navbar-expand-lg bg-primary navbar-dark px-4 py-3 rounded-bottom">
+        <nav class="navbar navbar-expand-lg bg-primary navbar-dark px-4 py-3 fixed-top">
             <div class="container-fluid">
                 <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
                     <img src="img/Logo.jpg" alt="Logo Libroptopus" width="80px" height="80px" class="rounded-circle">
                     <span class="fw-bold">Libroptopus</span>
                 </a>
-                
-                <!-- boton modo oscuro-claro -->
-                <button id="toggle-theme" class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
-                    <i id="icono" class="fas fa-moon"></i>
+
+                <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav" aria-controls="menuNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div class="collapse navbar-collapse justify-content-end" id="menuNav">
                     
-                    <ul id="navbar-nav gap-2 text-center">
+                    <ul class="navbar-nav gap-2 text-center">
                         <li class="nav-item"><a class="nav-link custom-link" href="index.html">Inicio</a></li>
                         <li class="nav-item"><a class="nav-link custom-link" href="#categorias">Categorías</a></li>
                         <li class="nav-item"><a class="nav-link custom-link" href="#recomendaciones">Recomendaciones</a></li>
@@ -48,16 +46,19 @@
                         <li class="nav-item"><a class="nav-link custom-link" href="#resenas">Reseñas</a></li>
                         <li class="nav-item"><a class="nav-link custom-link" href="pages/6-contacto.html">Contacto</a></li>
                         <li class="nav-item">
-                            <a class="nav-link custom-link" href="pages/7-carrito.html">
+                            <a class="nav-link custom-link position-relative" href="pages/7-carrito.html">
                                 <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                <span id="carrito-cantidad" class="position-absolute top-0 strart-100 translate-middle badge rounded-pill bg-danger"> 0</span>
                             </a>
                         </li>
-                        <!-- close button -->
-                        <a href="#" id="close" class="close">
-                            <i class="far fa-times" aria-hidden="true"></i>
-                        </a>
+                        
                     </ul>
                 </div>
+
+                <!-- boton modo oscuro-claro -->
+                <button id="toggle-theme" class="btn btn-outline-light ms-3">
+                    <i id="icono" class="fas fa-moon"></i>
+                </button>
             
             </div>
             
@@ -70,16 +71,100 @@
         <!-- banner principal -->
         <section class="hero-banner" id="inicio">
             <div class="hero-content">
-                <h3>Descubre mundos entre páginas</h3>
+                <h3 class="titulo-cursiva">Descubre mundos entre páginas</h3>
                 <p>Tu librería online con miles de títulos a un click de distancia</p>
                 <a class="btn" href="pages/2-productos.html">Ver catálogo</a>
             </div>
         </section>
 
+        <div class="separador"></div>
+
+        <!-- carrusel -->
+        <section class="carrusel-categorias">
+            <div id="carouselCategorias" class="carousel slide mt-5 mb-5" data-bs-ride="carousel" data-bs-interval="3500">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselCategorias" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Fantasía"></button>
+                    <button type="button" data-bs-target="#carouselCategorias" data-bs-slide-to="1" aria-label="Terror y Horror"></button>
+                    <button type="button" data-bs-target="#carouselCategorias" data-bs-slide-to="2" aria-label="Ciencia Ficción / Distopía"></button>
+                    <button type="button" data-bs-target="#carouselCategorias" data-bs-slide-to="3" aria-label="Thriller / Misterio"></button>
+                    <button type="button" data-bs-target="#carouselCategorias" data-bs-slide-to="4" aria-label="Juvenil"></button>
+                    <button type="button" data-bs-target="#carouselCategorias" data-bs-slide-to="5" aria-label="Romance"></button>
+                    <button type="button" data-bs-target="#carouselCategorias" data-bs-slide-to="6" aria-label="Fantasía Oscura / Paranormal"></button>
+                    <button type="button" data-bs-target="#carouselCategorias" data-bs-slide-to="7" aria-label="Biografía / Ensayo"></button>
+                </div>
+                
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="img/fantasia.jpg" class="d-block w-100" alt="Fantasía">
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+                            <h5>Fantasía</h5>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="img/terror.jpg" class="d-block w-100" alt="Terror y Horror">
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+                            <h5>Terror y Horror</h5>
+
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="img/cs ficcion.jpg" class="d-block w-100" alt="Ciencia Ficción / Distopía">
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+                            <h5>Ciencia Ficción / Distopía</h5>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="img/thriller.jpg" class="d-block w-100" alt="Thriller / Misterio">
+                        <div class="carousel-caption d-lg-none d-md-block bg-dark bg-opacity-50 rounded">
+                            <h5>Thriller / Misterio</h5>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="img/juvenil.jpg" class="d-block w-100" alt="Juvenil">
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+                            <h5>Juvenil</h5>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="img/romance.jpg" class="d-block w-100" alt="Romance">
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+                            <h5>Romance</h5>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="img/paranormal.jpg" class="d-block w-100" alt="Fantasía Oscura / Paranormal">
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+                            <h5>Fantasía Oscura / Paranormal</h5>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="img/ensayo.jpg" class="d-block w-100" alt="Biografía / Ensayo">
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+                            <h5>Biografía / Ensayo</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselCategorias" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselCategorias" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+
+            </div>
+        </section>
 
         <!-- seccion de categorias -->
         <section class="section-categorias" id="categorias">
-            <h2 class="section-title">Explora por categorias</h2>
+            <h2 class="section-title titulo-playfair">Explora por categorias</h2>
             <div class="separador"></div>
             <div class="botones-categorias" id="botones-categorias">
             
@@ -91,7 +176,7 @@
 
         <!-- seccion ofertas -->
         <section class="section-ofertas" id="ofertas">
-            <h2 class="section-title">Ofertas especiales!</h2>
+            <h2 class="section-title titulo-playfair">Ofertas especiales!</h2>
             <div class="separador"></div>
             <div class="ofertas-container">
 
@@ -100,7 +185,7 @@
 
         <!-- seccion novedades -->
         <section class="section-novedades" id="novedades">
-            <h2 class="section-title">Novedades</h2>
+            <h2 class="section-title titulo-playfair">Novedades</h2>
             <div class="separador"></div>
             <div class="novedades-container">
 
@@ -109,7 +194,7 @@
 
         <!-- seccion de recomendaciones -->
         <section class="section-recomendaciones" id="recomendaciones">
-            <h2 class="section-title">Recomendaciones para vos...</h2>
+            <h2 class="section-title titulo-playfair">Recomendaciones para vos...</h2>
             <div class="separador"></div>
             <div class="recomendaciones-container">
 
@@ -118,7 +203,7 @@
 
         <!-- reseñas -->
         <section class="section-resenas" id="resenas">
-            <h2 class="section-title">Lo que dicen nuestros lectores</h2>
+            <h2 class="section-title titulo-playfair">Lo que dicen nuestros lectores</h2>
             <div class="separador"></div>
             <div class="resenas-container">
 
@@ -163,74 +248,90 @@
 
     </main>
 
+    <section class="newsletter-section">
+        <div class="container py-4">
+                <div class="row align-items-center">
+                    <div class="col-12 col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        <h3 class="titulo-playfair">Newsletter</h3>
+                        <div class="separador mx-md-0 mx-auto"></div>
+                        <p>Suscríbete para recibir noticias sobre nuevos lanzamientos y <span class="oferta-destacada">ofertas exclusivas</span>.</p>
+                    </div>
+                    
+                    <div class="col-12 col-md-6">
+                        <form action="#" class="newsletter-form d-flex flex-column flex-md-row align-items-stretch" id="newsletter-form">
+                            <input type="email" placeholder="Tu correo electrónico" id="newsletter-email" class="form-control rounded-start-pill border-0" required>
+                            <span class="error-msg" id="error-newsletter-email"></span>
+                            <button type="submit" id="btn-newsletter" class="btn btn-newsletter rounded-end-pill">Suscribirse</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    </section>
 
     <!-- pie de pagina con info de contacto -->
     <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-columna">
-                <h3>Libroptopus</h3>
-                <div class="separador"></div>
-                <p>Tu tienda online de libros favorita, con la mayor variedad de títulos y los mejores precios.</p>
-            </div>
-
-            <div class="footer-columna">
-                <h3>Enlaces rapidos</h3>
-                <div class="separador"></div>
-                <ul class="footer-links">
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="pages/2-productos.html">Catálogo</a></li>
-                    <li><a href="pages/3-novedades.html">Novedades</a></li>
-                    <li><a href="pages/4-ofertas.html">Ofertas</a></li>
-                    <li><a href="pages/5-resenas.html">Reseñas</a></li>
-                    <li><a href="pages/6-contacto.html">Contacto</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-columna">
-                <h3>Síguenos</h3>
-                <div class="separador"></div>
-                <div class="social-iconos">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
+        <div class="footer-container container py-4">
+            <div class="row gy-4">
+                <div class="col-md-3">
+                    <h4>Libroptopus</h4>
+                    <div class="separador"></div>
+                    <p>Tu tienda online de libros favorita, con la mayor variedad de títulos y los mejores precios.</p>
                 </div>
+
+                <div class="col-md-2">
+                    <h5>Enlaces rapidos</h5>
+                    <div class="separador"></div>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="pages/2-productos.html">Catálogo</a></li>
+                        <li><a href="pages/6-contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-2">
+                    <h5>Mi Cuenta</h5>
+                    <div class="separador"></div>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Iniciar Sesión</a></li>
+                        <li><a href="#">Ver Carrito</a></li>
+                        <li><a href="#">Mis Favioritos</a></li>
+                        <li><a href="#">Seguimiento de Pedido</a></li>
+                        <li><a href="#">Ayuda</a> </li>
+                    </ul> 
+                </div>
+
+                <div class="col-md-2">
+                    <h5>Síguenos</h5>
+                    <div class="separador"></div>
+                    <div class="social-iconos">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <h5>Descargá la App</h5>
+                    <div class="separador"></div>
+                    <p>Desde App Store o Google Play</p>
+                    <div class="d-flex gap-2 mb-2">
+                        <img src="img/app.jpg" alt="App Store" width="100">
+                        <img src="img/play.jpg" alt="Google Play" width="100">
+                    </div>
+                    <p>Pasarelas de pago seguras</p>
+                    <div class="separador"></div>
+                    <img src="img/pay.png" alt="Métodos de pago" width="200">
+                </div>
+
             </div>
 
-            <div class="footer-columna">
-                <h3>Newsletter</h3>
-                <div class="separador"></div>
-                <p>Suscríbete para recibir noticias sobre nuevos lanzamientos y ofertas exclusivas.</p>
-                <form action="newsletter-form" class="footer-newsletter" id="newsletter-form">
-                    <input type="email" placeholder="Tu correo electrónico" id="newsletter-email" required>
-                    <span class="error-msg" id="error-newsletter-email"></span>
-                    <button type="submit" id="btn-newsletter">Suscribirse</button>
-                </form>
+            <hr class="my-4">
+
+            <div class="text-center footer-copy">
+                <p>&copy;© 2025 Libroptopus. Todos los derechos reservados</p>
             </div>
-        </div>
-
-        <div class="footer-columna">
-            <h3>Mi Cuenta</h3>
-            <a href="#">Iniciar Sesión</a>
-            <a href="#">Ver Carrito</a>
-            <a href="#">Mis Favioritos</a>
-            <a href="#">Seguimiento de Pedido</a>
-            <a href="#">Ayuda</a>    
-        </div>
-
-        <div class="footer-columna">
-            <h3>Descargá la App</h3>
-            <p>Desde App Store o Google Play</p>
-            <div class="footer-columna-install">
-                <img src="img/app.jpg" alt="">
-                <img src="img/play.jpg" alt="">
-            </div>
-            <p>Pasarelas de pago seguras</p>
-            <img src="img/pay.png" alt="">
-        </div>
-
-        <nav class="footer-copy">
-            <p>&copy;© 2025 Libroptopus. Todos los derechos reservados</p>
-        </nav>
+        </div>    
+        
     </footer>
 
     <!-- bootstrap -->

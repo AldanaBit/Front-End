@@ -106,7 +106,7 @@ function dibujarProductos(productos) {
 function crearProductoHTML(producto) {
     return ` 
                 <div class="producto-card">
-                    <div class= "producto">
+                    
                         <img src="${producto.img}" alt="${producto.nombre}" class= "producto-imagen">
                         <div class="producto-info">
                             <span class="producto-categoria">${producto.categoria}</span>
@@ -119,7 +119,7 @@ function crearProductoHTML(producto) {
                                 <i class="fas fa-shopping-cart"></i>
                             </a>
                         </div>
-                    </div>
+                   
                 </div>            
            ` 
 }

@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const formularioContacto = document.getElementById('formulario-contacto');
+    const formulario = document.getElementById('formulario-contacto');
     const nombre = document.getElementById('nombre');
     const correo = document.getElementById('email');
     const mensaje = document.getElementById('mensaje');
@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // visibilidad y texto de error
     const mostrarEstadoCampo = (input, esValido, mensaje = '') =>{
         const contenedor = input.parentNode;
-        const textoError = contenedor.querySelector('.error-mgs');
+        const textoError = contenedor.querySelector('.error-msg');
 
         if (esValido) {
             contenedor.classList.remove('error');
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // evento submit
-    formularioContacto.addEventListener('submit',function(evento){
+    formulario.addEventListener('submit',function(evento){
         evento.preventDeFault();
 
         const campos = [
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
         let esValido = true;
 
         // si retorna false
-        camposValidar.forEach(camposInfo => {
+        campos.forEach(camposInfo => {
             const validado = validarCampo(camposInfo.elemento, camposInfo.mensajeVacio, camposInfo.mensajeInvalido);
 
             if (!validado) {
@@ -77,7 +77,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (esValido) {
             console.log('¡Formulario enviado con éxito!');
-            formularioContacto.reset();
+            formulario.onsubmit();
+            formulario.reset();
         } else {
             console.log('El formulario no es válido. Por favor, revisa los campos.');
         }

@@ -9,7 +9,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Handlee&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap");
 
 
-:root[data-bs-theme="light"]{
+body[data-bs-theme="light"]{
   --bs-body-bg: #fdfdfd;
   --bs-body-color: #1e1e1e;
   --bs-primary: #4F3438;
@@ -19,7 +19,7 @@
   --bs-border-radius: 0.5rem;
 }
 
-:root[data-bs-theme="dark"]{
+body[data-bs-theme="dark"]{
   --bs-body-bg: #0C0715;
   --bs-body-color: #FFFFFF;
   --bs-primary: #CA313F;
@@ -30,6 +30,86 @@
 }
 
 
+[data-bs-theme="light"] .bg-primary,
+[data-bs-theme="dark"] .bg-primary{
+  background-color: var(--bs-primary) !important;
+}
+
+[data-bs-theme="light"] .text-primary,
+[data-bs-theme="dark"] .text-primary{
+  color: var(--bs-primary) !important;
+}
+
+[data-bs-theme="light"] .navbar .nav-link,
+[data-bs-theme="dark"] .navbar .nav-link{
+  color: var(--bs-body-color) !important;
+}
+
+[data-bs-theme="light"] .navbar-brand,
+[data-bs-theme="dark"] .navbar-brand{
+  color: var(--bs-body-color) !important;
+}
+
+#toggle-theme{
+  background: none;
+  border: 2px solid var(--bs-primary);
+  border-radius: 50%;
+  padding: 0.5rem;
+  cursor: pointer;
+  color: var(--bs-body-color);
+  background-color: transparent;
+}
+
+#toggle-theme:hover{
+  background-color: var(--bs-primary);
+  color: var(--bs-body-bg);
+}
+
+#toggle-theme i{
+  font-size: 1.5rem;
+}
+
+.navbar{
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+body{
+  padding-top: 100px;
+}
+
+body[data-bs-theme="light"]{
+  background-color: var(--bs-body-bg);
+  color: var(--bs-body-color);
+}
+
+body[data-bs-theme="dark"]{
+  background-color: var(--bs-body-bg);
+  color: var(--bs-body-color);
+}
+
+.btn-primary{
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+  color: #FFFFFF;
+}
+
+.bg-primary:hover{
+  background-color: var(--bs-secondary);
+  border-color: var(--bs-secondary);
+  color: #FFFFFF;
+}
+
+.btn-secondary{
+  background-color: var(--bs-secondary);
+  border-color: var(--bs-secondary);
+  color: #FFFFFF;
+}
+
+.btn-secondary:hover{
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+}
 
 /* fuentes */
 .merriweather-uniquifier {
@@ -44,5 +124,19 @@
 .handlee-regular {
   font-family: "Handlee", cursive;
   font-weight: 400;
+  font-style: normal;
+}
+
+.great-vibes-regular {
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.playfair-display-uniquifier {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
   font-style: normal;
 }

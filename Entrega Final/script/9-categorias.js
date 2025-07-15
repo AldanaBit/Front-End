@@ -13,13 +13,22 @@ document.addEventListener('DOMContentLoaded', () =>{
         const categorias = [...new
             Set(data.map(producto => producto.categoria))];
 
-        categorias.forEach(categoria =>{
+        categorias.forEach((categoria, index) =>{
             const boton = document.createElement('button');
             boton.textContent = categoria;
 
             boton.classList.add('btn-categoria');
-            boton.addEventListener('click', () => mostrarProductosPorCategoria(categoria));
+            boton.addEventListener('click', () => {
+                document.querySelectorAll('.btn-categoria').forEach(btn => btn.classList.remove('activo'));
+                boton.classList.add('activo');
+                mostrarProductosPorCategoria(categoria);
+            });
+            
             contenedorBotones.appendChild(boton);
+            if (index === 0) {
+            boton.classList.add('activo');
+            mostrarProductosPorCategoria(categoria);
+            }
         });
     });
 
